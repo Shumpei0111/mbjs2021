@@ -5,13 +5,13 @@ import Layout from '../../components/layout';
 
 const SingleBlog = (props) => {
     return (
-        <>
-            <Layout>
-                <h1>{props.frontmatter.data.title}</h1>
-                <p>{props.frontmatter.data.date}</p>
-                <ReactMarkdown children={props.markdownBody} />
-            </Layout>
-        </>
+        <Layout>
+            <h1>{props.frontmatter.data.title}</h1>
+            <p>{props.frontmatter.data.date}</p>
+            <ReactMarkdown>
+                {props.markdownBody}
+            </ReactMarkdown>
+        </Layout>
     )
 }
 
