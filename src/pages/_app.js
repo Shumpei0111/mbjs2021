@@ -1,5 +1,4 @@
-import '../styles/index.module.css';
-import '../styles/a.scss';
+import '../styles/base.scss';
 
 
 function MyApp({ Component, pageProps }) {

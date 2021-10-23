@@ -1,0 +1,68 @@
+@use './variables.module' as v;
+
+
+.headerContainer {
+    height: 178px;
+    border-left: 1px solid;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &>* {
+        pointer-events: all;
+    }
+}
+
+.headerLogo {
+    display: inline-block;
+    font-size: 4.1rem;
+    margin-top: 103px;
+    margin-left: 24px;
+
+    &__subtitle {
+        font-size: 1.2rem;
+        padding-bottom: 4px;
+    }
+}
+
+.burgerContainer {
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        height: 38px;
+        justify-content: space-between;    
+
+        &__bar {
+            transition: .4s cubic-bezier(0.23,1,0.32,1);
+            transition-property: opacity,transform,-webkit-transform;
+            width: 90px;
+            height: 1px;
+            background-color: currentColor;
+        }
+
+        &__str {
+            transition: .4s cubic-bezier(0.23,1,0.32,1);
+            text-align: right;
+        }
+    }
+
+    .burger__open {
+        .burger__bar:nth-child(1) {
+            transform: rotate(45deg) translate3d(6px, 6px, 0);
+        }
+
+        .burger__bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger__bar:nth-child(3) {
+            transform: rotate(-45deg) translate3d(6px, -6px, 0);
+        }
+
+        .burger__str {
+            opacity: 0;
+        }
+    }
+}

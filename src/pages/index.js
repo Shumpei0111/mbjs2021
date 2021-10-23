@@ -1,17 +1,17 @@
 import Link from 'next/link';
 import Layout from '../components/layout';
 
-import * as style from '../styles/index.module.css';
 
 const Index = () => {
 	return(
-		<>
-			<Layout>
-				<h1 className={style.h1Class}>Hi</h1>
+		<Layout>
+			<div>
 				<Link href='/blog'><a>to Blog</a></Link>
+			</div>
+			<div>
 				<Link href='/contact'><a>to Contact page</a></Link>
-			</Layout>
-		</>
+			</div>
+		</Layout>
 	)
 };
 
