@@ -1,16 +1,11 @@
 import Link from 'next/link';
 import Layout from '../components/layout';
-
+import FirstView from '../components/first-view';
 
 const Index = () => {
 	return(
 		<Layout>
-			<div>
-				<Link href='/blog'><a>to Blog</a></Link>
-			</div>
-			<div>
-				<Link href='/contact'><a>to Contact page</a></Link>
-			</div>
+			<FirstView />
 		</Layout>
 	)
 };

@@ -2,7 +2,8 @@
 
 
 .headerContainer {
-    height: 178px;
+    position: relative;
+    height: v.$headerHeight;
     border-left: 1px solid;
     width: 100%;
     display: flex;
@@ -27,6 +28,10 @@
 }
 
 .burgerContainer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
 
     .burger {
         display: flex;

@@ -1,6 +1,10 @@
+import Layout from '../components/layout';
+
 const Contact = () => {
     return (
-        <h1>Contact</h1>
+        <Layout>
+            <h1>Contact</h1>
+        </Layout>
     )
 }
 
