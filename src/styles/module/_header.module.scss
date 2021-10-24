@@ -2,6 +2,7 @@
 
 
 .headerContainer {
+    position: relative;
     height: 178px;
     border-left: 1px solid;
     width: 100%;
@@ -27,6 +28,10 @@
 }
 
 .burgerContainer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
 
     .burger {
         display: flex;

@@ -1,0 +1,69 @@
+@use './variables.module' as v;
+
+.burgerMenu {
+    width: 100%;
+}
+
+.burgerMenuContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 10;
+    overflow: hidden;
+
+    .burgerMenu__items {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.burgerIsOpen {
+    transform: translate(0, 0);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .3s;
+    background-color: v.$c-primary-comple;
+
+
+    .burgerMenuItem {
+        display: block;
+        opacity: 1;
+        transform: translate(0, 0);
+        transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 2.5s, opacity linear 0.7s;
+        font-size: 12rem;
+
+        @for $i from 1 through 2 {
+            &:nth-of-type(#{$i})::before {
+                content: '#{$i}';
+                font-size: 1.2rem;
+                font-family: Helvatica, sans-serif;
+                margin-right: 2rem;
+                border: 1px solid;
+                border-radius: 50%;
+                padding: 0.8rem 1rem;
+                opacity: .7;
+            }
+        }
+
+        a {
+            color: v.$c-white;
+        }
+    }
+}
+
+.burgerIsHidden {
+    transform: translate(0, 100%);
+
+    .burgerMenuItem {
+        display: block;
+        opacity: 0;
+    }
+}
