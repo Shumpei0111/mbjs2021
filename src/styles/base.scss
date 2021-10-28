@@ -61,3 +61,13 @@ button, input, select, textarea {
 h1 {
     font-weight: 400;
 }
+
+h2 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: v.$c-primary;
+    letter-spacing: 0;
+    transform: translate(0);
+    color: transparent;
+    font-size: 10rem;
+    font-family: 'Hoefler Text', sans-serif;
+}
