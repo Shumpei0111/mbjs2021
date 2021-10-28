@@ -1,0 +1,49 @@
+@use './variables.module' as v;
+
+$containerHeight: 335px;
+$addressHeight: 82px;
+
+.footerContainer {
+    height: $containerHeight;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+
+    .footerTopBorder {
+        border-top: 1px solid;
+        opacity: 0.3;
+    }
+
+    .footerLinks {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: calc($containerHeight - $addressHeight);
+
+        &__item {
+            font-size: 3.4rem;
+            position: relative;
+
+            @for $i from 1 through 3 {
+                &:nth-of-type(#{$i}):before {
+                    content: '#{$i}';
+                    border: 1px solid;
+                    border-radius: 50%;
+                    font-size: 1.4rem;
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    text-align: center;
+                    top: -10px;
+                    left: -26px;
+                    padding: 4px;
+                }
+            }
+        }
+    }
+
+    .footer__address {
+        height: $addressHeight;
+        text-align: center;
+        font: inherit;
+    }
+}

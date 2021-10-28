@@ -61,6 +61,7 @@
 
 .burgerIsHidden {
     transform: translate(0, 100%);
+    position: fixed;
 
     .burgerMenuItem {
         display: block;
