@@ -9,7 +9,7 @@ const Footer = () => {
                 <li className={style.footerLinks__item}>About</li>
                 <li className={style.footerLinks__item}>Contact</li>
             </ul>
-            <address className={style.footer__address}>copyright 2021 Shumpei All Rights Reserved.</address>
+            <address translate='no' className={style.footer__address}>copyright 2021 Shumpei All Rights Reserved.</address>
         </footer>
     )
 };
