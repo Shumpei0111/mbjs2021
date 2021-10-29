@@ -1,0 +1,98 @@
+@use './variables.module' as v;
+
+.projects {
+    position: relative;
+    margin: 300px 0;
+
+    &__h2 {
+        position: absolute;
+        top: 0;
+        left: -240px;
+    }
+
+    &__mainContents {
+        display: flex;
+        flex-direction: column;
+        padding-left: 40%;
+
+        .projects__globalCaption {
+            line-height: 3;
+            margin-bottom: 32px;
+        }
+
+        .projects__genreContainer {
+            margin-bottom: 160px;
+            position: relative;
+
+            .projects__genreTitle {
+                font-weight: bold;
+                margin-bottom: 32px;
+            }
+
+            .projects__bgTitle {
+                position: absolute;
+                font-size: 30rem;
+                opacity: .2;
+            }
+
+            ul {
+                li {
+                    margin-bottom: 40px;
+                    position: relative;
+                }
+            }
+
+            .projects__name {
+                font-size: 2.4rem;
+                margin-bottom: 16px;
+            }
+
+            .projects__num:before {
+                content: '';
+                font-size: 1.6rem;
+                position: absolute;
+                top: -10px;
+                left: -20px;
+            }
+
+            .projects__num1:before {
+                content: '01';
+            }
+
+            .projects__num2:before {
+                content: '02';
+            }
+
+            .projects__num3:before {
+                content: '03';
+            }
+
+            .projects__pjCaption {
+                line-height: 1.6;
+            }
+
+            .projects__circleTop {
+                margin-bottom: 64px;
+            }
+
+            .projects__circle {
+                &__join {
+                    margin-bottom: 40px;
+                }
+
+                &__distribution {
+                    display: flex;
+
+                    ul {
+                        display: flex;
+                        margin-left: 24px;
+
+                        li {
+                            padding-right: 24px;
+                        }
+                    }
+                }
+            }
+        } // .projects__genreContainer
+    }
+}
