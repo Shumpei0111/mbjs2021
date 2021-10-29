@@ -24,7 +24,7 @@ const FirstView = () => {
     return (
         <div className={style.firstView}>
             <div className={`${style.firstView__container} ${fadein.animation} ${fadeIn ? fadein.active: ''}`}>
-                <span className={style.firstView__iam}>I'm a</span>
+                <span className={style.firstView__iam}>I&ldquo;m a</span>
                 <div className={style.firstView__role}>
                     <p className={style.role__name}>Web Front-End Developer</p>
                     <p className={style.role__name}>DOUJIN Creator</p>
