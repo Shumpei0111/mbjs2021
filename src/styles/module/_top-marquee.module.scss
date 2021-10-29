@@ -1,0 +1,49 @@
+@use './variables.module' as v;
+
+.topMarquee {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    will-change: transform;
+    transform: translateZ(0px);
+    height: 11vh;
+    overflow: hidden;
+    max-width: none;
+    display: flex;
+    align-items: center;
+
+    &__inner {
+        width: 350%;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        position: absolute;
+        animation: marquee 4s linear infinite;
+        animation-name: bettermarquee;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    &__content {
+        display: flex;
+        margin-right: 40px;
+        align-items: center;
+
+        font-size: 6rem;
+    }
+}
+
+@keyframes marquee {
+    0% { left: 0%; }
+    100% { left: -100%; }
+}
+
+@keyframes bettermarquee {
+    from {
+        transform: translate3d(0,0,0);
+    }
+    to {
+        transform: translate3d(-30%,0,0);
+    }
+}
