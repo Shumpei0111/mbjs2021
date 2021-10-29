@@ -8,8 +8,6 @@ const TopMarquee = () => {
                 <p className={style.topMarquee__content}>Enjoy creating!</p>
                 <p className={style.topMarquee__content}>Enjoy creating!</p>
                 <p className={style.topMarquee__content}>Enjoy creating!</p>
-                <p className={style.topMarquee__content}>Enjoy creating!</p>
-                <p className={style.topMarquee__content}>Enjoy creating!</p>
             </div>
         </div>
     )
