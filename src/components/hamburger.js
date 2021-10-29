@@ -14,6 +14,9 @@ const Hamburger = (props) => {
                             <Link href='/blog'><a>Blog</a></Link>
                         </li>
                         <li className={style.burgerMenuItem}>
+                            <Link href='/about'><a>About</a></Link>
+                        </li>
+                        <li className={style.burgerMenuItem}>
                             <Link href='/contact'><a>Contact</a></Link>
                         </li>
                     </ul>
