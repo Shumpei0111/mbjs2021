@@ -7,7 +7,7 @@ const Projects = () => {
             <div className={style.projects__mainContents}>
                 <div className={style.projects__globalCaption}>
                     <p>個人活動 / Personal Projects</p>
-                    <o>自主制作のWebアプリやWebサイト、同人活動における記録。</o>
+                    <p>自主制作のWebアプリやWebサイト、同人活動における記録。</p>
                 </div>
 
                 <div className={style.projects__genreContainer}>

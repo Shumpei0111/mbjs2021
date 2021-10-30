@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import matter from "gray-matter";
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 import * as style from '../styles/module/_page_blog.module.scss';
 
@@ -11,9 +11,9 @@ const Blog = (props) => {
                 <div className={style.blogTop}>
                     <h2 className={style.blogTop__h2}>Blog</h2>
                     {props.blogs.map( (blog, ind) => 
-                        <Link href={`/blog/${blog.slug}`}>
+                        <Link href={`/blog/${blog.slug}`} key={blog.slug}>
                             <a>
-                            <div className={style.blogs} key={ind}>
+                            <div className={style.blogs}>
                                 <div className={style.blogs__wrapper}>
                                     <p>{blog.frontmatter.title}</p>
                                     <p>posted: {blog.frontmatter.date}</p>
