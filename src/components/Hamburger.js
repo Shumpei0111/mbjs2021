@@ -6,7 +6,7 @@ const Hamburger = (props) => {
     const isOpen = props.isOpen;
     const pathname = props.pathname;
 
-    const isBlog = pathname.match(/^blog/);
+    const isBlog = pathname.match(/^archives/);
     const isAbout = pathname.match(/^about/);
     const isContact = pathname.match(/^contact/);
 
@@ -16,7 +16,7 @@ const Hamburger = (props) => {
                 <div className={style.burgerMenu__items}>
                     <ul>
                         <li className={`${style.burgerMenuItem} ${isBlog ? style.currentOpenPage : ''}`}>
-                            <Link href='/blog'><a>Blog</a></Link>
+                            <Link href='/archives'><a>Blog</a></Link>
                         </li>
                         <li className={`${style.burgerMenuItem} ${isAbout ? style.currentOpenPage : ''}`}>
                             <Link href='/about'><a>About</a></Link>
