@@ -57,6 +57,13 @@
             color: v.$c-white;
         }
     }
+
+    .currentOpenPage {
+
+        a {
+            text-decoration: line-through 10px solid v.$c-primary;
+        }
+    }
 }
 
 .burgerIsHidden {

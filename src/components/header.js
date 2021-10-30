@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 import Hamburger from './hamburger';
 
@@ -7,6 +8,9 @@ import * as style from '../styles/module/_header.module.scss';
 
 const Header = () => {
     const [open, setOpen] = useState( false );
+    const router = useRouter();
+    const pathname = router.pathname.slice(1);
+
 
     const toggleModal = () => {
         if( !open ) setOpen( true );
@@ -32,7 +36,7 @@ const Header = () => {
                     <span className={style.burger__str}>MENU</span>
                 </div>
             </button>
-            <Hamburger isOpen={open} />
+            <Hamburger isOpen={open} pathname={pathname} />
         </header>
     )
 };
