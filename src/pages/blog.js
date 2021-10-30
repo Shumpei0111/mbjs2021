@@ -2,18 +2,28 @@ import Link from 'next/link';
 import matter from "gray-matter";
 import Layout from '../components/layout';
 
+import * as style from '../styles/module/_page_blog.module.scss';
+
 const Blog = (props) => {
     return(
         <>
             <Layout>
-                <h1>Blog page</h1>
-                {props.blogs.map( (blog, ind) => 
-                    <div key={ind}>
-                        <h3>{blog.frontmatter.title}</h3>
-                        <p>{blog.frontmatter.date}</p>
-                        <Link href={`/blog/${blog.slug}`}><a>Read More</a></Link>
-                    </div>
-                )}
+                <div className={style.blogTop}>
+                    <h2 className={style.blogTop__h2}>Blog</h2>
+                    {props.blogs.map( (blog, ind) => 
+                        <Link href={`/blog/${blog.slug}`}>
+                            <a>
+                            <div className={style.blogs} key={ind}>
+                                <div className={style.blogs__wrapper}>
+                                    <p>{blog.frontmatter.title}</p>
+                                    <p>posted: {blog.frontmatter.date}</p>
+                                </div>
+                                [Read More...]
+                            </div>
+                            </a>
+                        </Link>
+                    )}
+                </div>
             </Layout>
         </>
     )
@@ -32,7 +42,7 @@ export async function getStaticProps() {
             const document = matter( val.default );
 
             return {
-                frontmatter: document.data,
+                frontmatter: JSON.parse( JSON.stringify(document.data) ),
                 slug: slug
             }
         });
@@ -42,7 +52,7 @@ export async function getStaticProps() {
     } )(require.context('../content/', true, /\.md$/));
 
     const orderedBlogs = blogs.sort( (a, b) => {
-        return b.frontmatter.id - a.frontmatter.id;
+        return (a.frontmatter.date > b.frontmatter.date) ? -1 : 1;
     } );
 
 
