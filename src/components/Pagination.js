@@ -1,21 +1,27 @@
 import Link from 'next/link';
 
 export const Pagination = (props) => {
-    const { totalCount } = props;
-    const PER_PAGE = 5;
+    const { total, page, perPage, href, callBack } = props;
 
-    const range = (start, end) =>
-            [...Array(end - start + 1)].map((_, i) => start + i)
+    const prevPage = page > 1 ? page -1 : null;
+    let nextPage = null;
+    if( page < Math.ceil(total / perPage) ) {
+        nextPage = page + 1;
+    }
 
     return (
-        <ul>
-        {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
-            <li key={index}>
-            <Link href={ `/archives/page/${number}`}>
-                <a>page {number}</a>
-            </Link>
-            </li>
-        ))}
-        </ul>
-    );
+        <div>
+            <span>
+                {prevPage ? (
+                    <Link href={href} as={callBack(prevPage)}><a>{prevPage}</a></Link>
+                ): ``}
+            </span>
+            <span>{page}</span>
+            <span>
+                {nextPage ? (
+                    <Link href={href} as={callBack(nextPage)}><a>{nextPage}</a></Link>
+                ): ``}
+            </span>
+        </div>
+    )
 };

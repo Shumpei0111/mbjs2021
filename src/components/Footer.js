@@ -7,7 +7,7 @@ const Footer = () => {
             <div className={style.footerTopBorder} />
             <ul className={style.footerLinks}>
                 <li className={style.footerLinks__item}>
-                    <Link href='/archives'><a>Blog</a></Link>
+                    <Link href='/archives/1'><a>Blog</a></Link>
                 </li>
                 <li className={style.footerLinks__item}>
                     <Link href='/about'><a>About</a></Link>

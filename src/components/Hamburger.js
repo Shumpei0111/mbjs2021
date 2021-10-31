@@ -16,7 +16,7 @@ const Hamburger = (props) => {
                 <div className={style.burgerMenu__items}>
                     <ul>
                         <li className={`${style.burgerMenuItem} ${isBlog ? style.currentOpenPage : ''}`}>
-                            <Link href='/archives'><a>Blog</a></Link>
+                            <Link href='/archives/1'><a>Blog</a></Link>
                         </li>
                         <li className={`${style.burgerMenuItem} ${isAbout ? style.currentOpenPage : ''}`}>
                             <Link href='/about'><a>About</a></Link>
