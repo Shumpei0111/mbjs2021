@@ -13,7 +13,7 @@ const SingleBlog = (props) => {
             <ReactMarkdown>
                 {props.markdownBody}
             </ReactMarkdown>
-            <Link href='/blog'><a>back to Blog-Top</a></Link>
+            <Link href='/archives'><a>back to Blog-Top</a></Link>
         </Layout>
     )
 }
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
         return data;
     } )( require.context( '../../content/', true, /\.md$/ ) );
 
-    const paths = blogSlugs.map((blogSlug) => `/blog/${blogSlug}`);
+    const paths = blogSlugs.map((blogSlug) => `/articles/${blogSlug}`);
 
     return {
         paths: paths,
