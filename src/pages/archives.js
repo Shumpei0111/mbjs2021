@@ -33,43 +33,6 @@ const Blog = (props) => {
 }
 export default Blog;
 
-// export async function getStaticProps() {
-//     const blogs = ( function(context) {
-//         const keys = context.keys();
-//         const vals = keys.map( context );
-
-//         const data = keys.map(( key, ind ) => {
-//             let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3);
-//             const val = vals[ ind ];
-//             const document = matter( val.default );
-
-//             return {
-//                 frontmatter: JSON.parse( JSON.stringify(document.data) ),
-//                 slug: slug
-//             }
-//         });
-
-
-//         return {
-//             props: {
-//                 data: data,
-//             }
-//         };
-        
-//     } )(require.context('../content/', true, /\.md$/));
-
-//     const orderedBlogs = blogs.props.data.sort( (a, b) => {
-//         return (a.frontmatter.date > b.frontmatter.date) ? -1 : 1;
-//     } );
-
-
-//     return {
-//         props: {
-//             blogs: orderedBlogs
-//         },
-//     }
-// };
-
 const COUNT_PER_PAGE = 10;
 const range = (stop) => {
     return Array.from({ length: stop }, (_, i) => i + 1);
