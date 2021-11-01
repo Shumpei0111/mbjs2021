@@ -6,7 +6,7 @@ const Hamburger = (props) => {
     const isOpen = props.isOpen;
     const pathname = props.pathname;
 
-    const isBlog = pathname.match(/^archives/);
+    const isBlog = pathname.match(/^archives/) || pathname.match(/^articles/);
     const isAbout = pathname.match(/^about/);
     const isContact = pathname.match(/^contact/);
 

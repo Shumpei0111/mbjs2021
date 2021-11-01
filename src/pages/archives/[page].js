@@ -9,7 +9,6 @@ const COUNT_PER_PAGE = 10;
 
 export default function Archive(props) {
     const { posts, page, total, perPage } = props;
-    console.log(12, posts[0]);
     return (
         <Layout>
             {posts.map((post) => 
