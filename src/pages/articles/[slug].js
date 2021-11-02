@@ -1,13 +1,27 @@
 import matter from "gray-matter";
 import ReactMarkdown from 'react-markdown';
+import CodeBlock from "../../components/CodeBlock";
 import Layout from "../../components/Layout";
+import arrangeDate from "../../lib/arrange-date";
+
+import gfm from 'remark-gfm';
+
+import * as style from '../../styles/module/_page_singleBlog.module.scss';
 
 const SingleBlog = (props) => {
     return (
         <Layout>
-            <h1>{props.frontmatter.title}</h1>
-            <p>{props.frontmatter.date}</p>
-            <ReactMarkdown children={props.markdownBody} />
+            <div className={style.singleBlog}>
+                <p className={style.singleBlog__title}>
+                    {props.frontmatter.title}
+                    <span className={style.singleBlog__date}>posted at: {arrangeDate(props.frontmatter.date)}</span>
+                </p>
+                <ReactMarkdown
+                    components={{code: CodeBlock}}
+                    children={props.markdownBody}
+                    remarkPlugins={[gfm]}
+                />
+            </div>
         </Layout>
     )
 };

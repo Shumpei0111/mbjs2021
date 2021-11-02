@@ -1,26 +1,34 @@
 import fs from 'fs';
 
 import Link from 'next/link';
-import Layout from "../../components/Layout";
+import Layout from '../../components/Layout';
 import { Pagination } from '../../components/Pagination';
 import { listContentFiles, readContentFiles } from '../../lib/content-loader';
+import arrangeDate from '../../lib/arrange-date';
+import * as style from '../../styles/module/_page_articles.module.scss';
 
 const COUNT_PER_PAGE = 10;
 
 export default function Archive(props) {
     const { posts, page, total, perPage } = props;
-    console.log(12, posts[0]);
     return (
         <Layout>
-            {posts.map((post) => 
-                <div key={post.slug}>
-                    <Link href='/articles/[slug]' as={`/articles/${post.slug}`}>{post.title}</Link>
-                </div>
-            )}
+            <div className={style.articleContainer}>
+                {posts.map((post) => 
+                    <div className={style.articleWrapper} key={post.slug}>
+                        <Link href='/articles/[slug]' as={`/articles/${post.slug}`}>
+                            <a className={style.articleLink}>
+                                <p className={style.articleTitle}>{post.title}</p>
+                                <p className={style.postedDate}>posted at: {arrangeDate(post.date)}</p>
+                            </a>
+                        </Link>
+                    </div>
+                )}
 
-            <Pagination
-                page={page} total={total} perPage={perPage}
-                href='/archives/[page]' callBack={(page) => `/archives/${page}`} />
+                <Pagination
+                    page={page} total={total} perPage={perPage}
+                    href='/archives/[page]' callBack={(page) => `/archives/${page}`} />
+            </div>
         </Layout>
     )
 }
@@ -30,13 +38,16 @@ export async function getStaticProps({ params }) {
     const page = parseInt(params.page, 10);
     const end  = COUNT_PER_PAGE * page;
     const start = end - COUNT_PER_PAGE;
-    // TODO
-    // postsは新しい投稿から順に返すように
     const posts = await readContentFiles({ fs });
+
+    const orderdPosts = posts.sort( (a, b) => {
+        console.log(37,a.date);
+        return ( a.date > b.date ) ? -1 : 1;
+    } )
 
     return {
         props: {
-            posts: posts.slice(start, end),
+            posts: orderdPosts.slice(start, end),
             page,
             total: posts.length,
             perPage: COUNT_PER_PAGE

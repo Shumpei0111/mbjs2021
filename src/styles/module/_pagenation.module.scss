@@ -1,0 +1,21 @@
+@use './variables.module' as v;
+
+.pagenationContainer {
+    margin: 32px 0;
+    text-align: center;
+
+    .pagenationLists {
+        display: flex;
+        justify-content: center;
+
+        .pagenationItem {
+            padding: 0 8px 4px;
+            font-size: 1.6rem;
+            margin: 0 8px;
+        }
+
+        .currentPage {
+            border-bottom: 2px solid;
+        }
+    }
+}

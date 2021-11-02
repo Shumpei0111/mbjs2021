@@ -12,10 +12,6 @@ const readContentFiles = async ({ fs }) => {
 
     const contents = await Promise.all(promises);
     return JSON.parse(JSON.stringify(contents));
-
-    // return contents.sort(( a, b ) => {
-    //     return ( a.date > b.date ) ? -1 : 1
-    // });
 }
 
 const listContentFiles = ({ fs }) => {
