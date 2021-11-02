@@ -12,7 +12,7 @@ const Projects = () => {
 
                 <div className={style.projects__genreContainer}>
                     <p className={style.projects__genreTitle}>Webアプリ & Webサイト</p>
-                    <p className={style.projects__bgTitle}>APP&SITE</p>
+                    <p className={`${style.projects__bgTitle} ${style.projects__bgTitleMarquee}`} data-title='APP&SITE'>APP&SITE</p>
                     <ul>
                         <li>
                             <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num1}`}>PRESENT RESORT POINT</p>
@@ -27,7 +27,7 @@ const Projects = () => {
 
                 <div className={style.projects__genreContainer}>
                     <p className={style.projects__genreTitle}>同人活動</p>
-                    <p className={style.projects__bgTitle}>DOUJIN</p>
+                    <p className={`${style.projects__bgTitle} ${style.projects__bgTitleMarquee}`} data-title='DOUJIN'>DOUJIN</p>
                     <div className={style.projects__circleTop}>
                         <p className={style.projects__pjCaption}>「なな爺」名義にて活動中。</p>
                         <p className={style.projects__pjCaption}>【ファッションイラスト×アニメ】をコンセプトに、同人サークル「1月の朝」で<br />ガルパン（ガールズアンドパンツァー）やプリキュアなどの二次創作をしています。<br />アナログ感のある、ガーリーでちょっとクラシカルなイラストを制作しています。</p>

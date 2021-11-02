@@ -33,6 +33,23 @@
                 position: absolute;
                 font-size: 30rem;
                 opacity: .2;
+
+                &:before {
+                    content: attr(data-title);
+                    padding-right: 0.375em;
+                }
+                &:after {
+                    content: attr(data-title);
+                    padding-left: 0.375em;
+                }
+            }
+
+            .projects__bgTitleMarquee {
+                display: table;
+                white-space: nowrap;
+                animation: bgTitleMarquee 50s linear infinite;
+                pointer-events: none;
+                will-change: transform;
             }
 
             ul {
@@ -94,5 +111,16 @@
                 }
             }
         } // .projects__genreContainer
+    }
+}
+
+
+@keyframes bgTitleMarquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform:  translate3d( calc((-100% / 3) - 0.125em), 0, 0 );
     }
 }

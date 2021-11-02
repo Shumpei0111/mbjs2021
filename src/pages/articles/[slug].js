@@ -2,6 +2,7 @@ import matter from "gray-matter";
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from "../../components/CodeBlock";
 import Layout from "../../components/Layout";
+import arrangeDate from "../../lib/arrange-date";
 
 import gfm from 'remark-gfm';
 
@@ -11,8 +12,10 @@ const SingleBlog = (props) => {
     return (
         <Layout>
             <div className={style.singleBlog}>
-                <p className={style.singleBlog__title}>{props.frontmatter.title}</p>
-                <p className={style.singleBlog__date}>posted at: {props.frontmatter.date}</p>
+                <p className={style.singleBlog__title}>
+                    {props.frontmatter.title}
+                    <span className={style.singleBlog__date}>posted at: {arrangeDate(props.frontmatter.date)}</span>
+                </p>
                 <ReactMarkdown
                     components={{code: CodeBlock}}
                     children={props.markdownBody}

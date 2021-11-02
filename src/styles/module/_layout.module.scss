@@ -1,0 +1,9 @@
+@use './variables.module' as v;
+
+
+.mainContainer {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-bottom: v.$footerContainerHeight;
+}

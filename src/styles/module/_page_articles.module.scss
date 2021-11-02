@@ -1,0 +1,36 @@
+@use './variables.module' as v;
+
+
+.articleContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 768px;
+    margin: auto;
+
+    .articleWrapper {
+        margin-bottom: 40px;
+        display: inline-block;
+        
+        .articleLink {
+            display: inline-flex;
+            flex-direction: column;
+            transition: all .2s ease-in;
+            
+            p {
+                display: inline-flex;
+                flex-direction: column;
+            }
+
+            &:hover {
+                padding-left: 16px;
+            }
+
+            .articleTitle {
+            }
+
+            .postedDate {
+            }
+        }
+    }
+}
