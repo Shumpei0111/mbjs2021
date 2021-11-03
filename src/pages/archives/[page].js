@@ -11,8 +11,10 @@ const COUNT_PER_PAGE = 10;
 
 export default function Archive(props) {
     const { posts, page, total, perPage } = props;
+
     return (
         <Layout>
+            <h2 className={style.article__h2}>BLOG</h2>
             <div className={style.articleContainer}>
                 {posts.map((post) => 
                     <div className={style.articleWrapper} key={post.slug}>

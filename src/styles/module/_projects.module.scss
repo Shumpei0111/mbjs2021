@@ -7,7 +7,7 @@
     &__h2 {
         position: absolute;
         top: 0;
-        left: -240px;
+        left: 0;
     }
 
     &__mainContents {
@@ -50,6 +50,7 @@
                 animation: bgTitleMarquee 50s linear infinite;
                 pointer-events: none;
                 will-change: transform;
+                z-index: -1;
             }
 
             ul {

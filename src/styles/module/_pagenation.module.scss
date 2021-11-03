@@ -9,13 +9,19 @@
         justify-content: center;
 
         .pagenationItem {
-            padding: 0 8px 4px;
             font-size: 1.6rem;
             margin: 0 8px;
+            width: 24px;
+        }
+
+        a {
+            display: block;
         }
 
         .currentPage {
             border-bottom: 2px solid;
+            padding: 0 0 4px 0;
+            width: 24px;
         }
     }
 }
