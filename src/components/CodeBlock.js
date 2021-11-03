@@ -13,13 +13,6 @@ const CodeBlock = ({ inline, className, children }) => {
     return (
         <div>
             <div>{name}</div>
-            {/**
-            <SyntaxHighlighter
-                style={hopscotch}
-                language={lang}
-                children={String(children).replace(/\n$/, '')}
-            />
-             */}
             <SyntaxHighlighter
                 style={hopscotch}
                 language={lang}

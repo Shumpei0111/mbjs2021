@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import * as style from '../styles/module/_pagenation.module.scss';
 
 export const Pagination = (props) => {
-    const { total, page, perPage, href, callBack } = props;
+    const { total, perPage, href, callBack } = props;
     const router = useRouter();
     const currentPage = router.asPath.slice(-1);
 
