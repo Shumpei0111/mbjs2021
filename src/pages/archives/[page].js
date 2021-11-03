@@ -28,7 +28,7 @@ export default function Archive(props) {
                 )}
 
                 <Pagination
-                    page={page} total={total} perPage={perPage}
+                    total={total} perPage={perPage}
                     href='/archives/[page]' callBack={(page) => `/archives/${page}`} />
             </div>
         </Layout>
@@ -43,7 +43,6 @@ export async function getStaticProps({ params }) {
     const posts = await readContentFiles({ fs });
 
     const orderdPosts = posts.sort( (a, b) => {
-        console.log(37,a.date);
         return ( a.date > b.date ) ? -1 : 1;
     } )
 
