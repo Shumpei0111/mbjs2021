@@ -52,7 +52,7 @@ const Hamburger = (props) => {
                         </li>
                     </ul>
                 </div>
-                <p className={style.burgerMenu__siteTitle}>shumpei's portfolio - [MB.js]</p>
+                <p className={style.burgerMenu__siteTitle}>shumpei's portfolio - MB.js</p>
             </div>
         </nav>
     )
