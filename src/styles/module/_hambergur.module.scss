@@ -2,6 +2,7 @@
 
 .burgerMenu {
     width: 100%;
+    position: relative;
 }
 
 .burgerMenuContainer {
@@ -11,6 +12,8 @@
     color: white;
     z-index: 10;
     overflow: hidden;
+    background-color: transparent;
+    transition: background-color .3s cubic-bezier(.215,.61,.355,1);
 
     .burgerMenu__items {
         height: 100%;
@@ -29,12 +32,11 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .3s;
-    background-color: v.$c-primary-comple;
-
+    background: black;
 
     .burgerMenuItem {
         display: block;
+        width: auto;
         opacity: 1;
         transform: translate(0, 0);
         transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 2.5s, opacity linear 0.7s;
@@ -64,6 +66,28 @@
             text-decoration: line-through 10px solid v.$c-primary;
         }
     }
+
+    .burgerMenu__siteTitle {
+        position: absolute;
+        color: white;
+        top: 80%;
+        right: 8px;
+        transform: rotate(90deg);
+
+    }
+
+}
+
+.burgerMenu__blogHover {
+    background-color: v.$c-primary-comple;
+}
+
+.burgerMenu__aboutHover{
+    background-color: v.$c-green;
+}
+
+.burgerMenu__contactHover{
+    background-color: v.$c-primary;
 }
 
 .burgerIsHidden {
@@ -72,6 +96,11 @@
 
     .burgerMenuItem {
         display: block;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .burgerMenu__siteTitle {
         opacity: 0;
     }
 }
