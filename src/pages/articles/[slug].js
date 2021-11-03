@@ -16,11 +16,19 @@ const SingleBlog = (props) => {
                     {props.frontmatter.title}
                     <span className={style.singleBlog__date}>posted at: {arrangeDate(props.frontmatter.date)}</span>
                 </p>
+                {/**
                 <ReactMarkdown
                     components={{code: CodeBlock}}
                     children={props.markdownBody}
                     remarkPlugins={[gfm]}
                 />
+                 */}
+                <ReactMarkdown
+                    components={{code: CodeBlock}}
+                    remarkPlugins={[gfm]}
+                >
+                    {props.markdownBody}
+                </ReactMarkdown>
             </div>
         </Layout>
     )
