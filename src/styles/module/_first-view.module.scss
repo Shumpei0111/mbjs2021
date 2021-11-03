@@ -4,6 +4,9 @@
     position: relative;
     height: calc(100vh - v.$headerHeight);
     width: 100%;
+    max-width: v.$max-width;
+    min-width: v.$min-width;
+    margin: auto;
 
     &__container {
         position: absolute;

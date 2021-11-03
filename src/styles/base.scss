@@ -9,6 +9,7 @@ ul {list-style-type: none;}
 html {
     font-size: 62.5%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 * {
@@ -32,7 +33,6 @@ body {
     max-width: v.$max-width;
     min-width: v.$min-width;
     margin: 0 auto;
-    overflow-x: hidden;
 }
 
 a {
@@ -70,4 +70,15 @@ h2 {
     color: transparent;
     font-size: 10rem;
     font-family: 'Hoefler Text', sans-serif;
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    margin: auto calc(50% - 50vw);
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 0;
 }

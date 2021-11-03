@@ -10,8 +10,8 @@ const Projects = () => {
                     <p>自主制作のWebアプリやWebサイト、同人活動における記録。</p>
                 </div>
 
-                <div className={style.projects__genreContainer}>
-                    <p className={style.projects__genreTitle}>Webアプリ & Webサイト</p>
+                <div className={`${style.projects__genreContainer}`}>
+                    <p className={style.projects__genreTitle}>Webアプリ&nbsp;&&nbsp;Webサイト&nbsp;|&nbsp;WebApp&nbsp;&&nbsp;WebSite</p>
                     <p className={`${style.projects__bgTitle} ${style.projects__bgTitleMarquee}`} data-title='APP&SITE'>APP&SITE</p>
                     <ul>
                         <li>
@@ -25,8 +25,8 @@ const Projects = () => {
                     </ul>
                 </div>
 
-                <div className={style.projects__genreContainer}>
-                    <p className={style.projects__genreTitle}>同人活動</p>
+                <div className={`${style.projects__genreContainer}`}>
+                    <p className={style.projects__genreTitle}>同人活動&nbsp;|&nbsp;DOUJIN</p>
                     <p className={`${style.projects__bgTitle} ${style.projects__bgTitleMarquee}`} data-title='DOUJIN'>DOUJIN</p>
                     <div className={style.projects__circleTop}>
                         <p className={style.projects__pjCaption}>「なな爺」名義にて活動中。</p>

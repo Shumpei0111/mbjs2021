@@ -1,12 +1,20 @@
 @use './variables.module' as v;
 
+.article__h2 {
+    position: absolute;
+    left: 0;
+    top: 40%;
+}
 
 .articleContainer {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
     max-width: 768px;
+    min-width: v.$min-width;
     margin: auto;
+    position: relative;
 
     .articleWrapper {
         margin-bottom: 40px;
