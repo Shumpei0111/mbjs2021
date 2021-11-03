@@ -1,7 +1,7 @@
-import Layout from '../components/Layout';
-import FirstView from '../components/FirstView';
-import Projects from '../components/Projects';
-import TopMarquee from '../components/TopMarquee';
+import Layout from '../components/Layout.js';
+import FirstView from '../components/FirstView.js';
+import Projects from '../components/Projects.js';
+import TopMarquee from '../components/TopMarquee.js';
 
 
 const Index = () => {
