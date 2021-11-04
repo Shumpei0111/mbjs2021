@@ -18,7 +18,6 @@ tags: [Git]
 僕は**Git Feature Flow**というものを知ってやってみたところ、
 複数人開発した際のフローがわかりやすかったのでお伝えします。
 
-<!-- toc -->
 
 ## Git Feature Flowって？
 

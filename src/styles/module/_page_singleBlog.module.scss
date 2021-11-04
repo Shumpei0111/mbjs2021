@@ -5,20 +5,43 @@
     margin: 0 auto 80px;
 
     &__title {
-        font-size: 2.5rem;
-        padding: 16px 24px;
-        border: 1px solid;
+        font-size: 2rem;
+        padding: 16px 24px 16px 0;
+        border-bottom: 1px solid;
         margin: 40px 0;
-
-        &::before {
-            content: 'title: ';
-        }
     }
 
     &__date {
         padding-left: 24px;
         font-size: 1.4rem;
         display: block;
+    }
+
+    &__toc {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 20% 100px 40px;
+        position: relative;
+
+        &__cont {
+            position: absolute;
+            transform: rotate(-90deg);
+            top: 40%;
+            left: -50px;
+            margin: 0;
+        }
+
+        a {
+            margin-left: 16px;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+
+            &:hover {
+                text-decoration: underline;
+
+            }
+        }
     }
 
     h1 {
@@ -46,8 +69,8 @@
     }
 
     hr {
-        opacity: .3;
-        margin: 16px 0;
+        opacity: 0;
+        margin: 40px 0;
     }
 
     pre {

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import * as style from '../styles/module/_projects.module.scss';
 
 const Projects = () => {
@@ -11,15 +12,15 @@ const Projects = () => {
                 </div>
 
                 <div className={`${style.projects__genreContainer}`}>
-                    <p className={style.projects__genreTitle}>Webアプリ&nbsp;&&nbsp;Webサイト&nbsp;|&nbsp;WebApp&nbsp;&&nbsp;WebSite</p>
+                    <p className={style.projects__genreTitle}>Webアプリ&Webサイト&nbsp;|&nbsp;WebApp&WebSite</p>
                     <p className={`${style.projects__bgTitle} ${style.projects__bgTitleMarquee}`} data-title='APP&SITE'>APP&SITE</p>
                     <ul>
                         <li>
-                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num1}`}>PRESENT RESORT POINT</p>
+                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num1}`}><Link href='https://present-resort-point.tokyo/' ><a rel='noopener' target='_blank'>PRESENT RESORT POINT</a></Link></p>
                             <p className={style.projects__pjCaption}>１週間でWebサービスを作るイベント#web1week に参加。<br />「世界のリゾート地にあるライブカメラでリゾート気分を味わう」をコンセプトに制作。</p>
                         </li>
                         <li>
-                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num2}`}>廃校探索</p>
+                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num2}`}><Link href='https://hoshikake-obake.site/'><a rel='noopener' target='_blank'>廃校探索</a></Link></p>
                             <p className={style.projects__pjCaption}>Twitter上の企画：星駆web制作企画に参加。「お化け屋敷」と簡単な設定だけ与えられ、<br />約1ヶ月で調査、コンセプト・企画のブラッシュアップ、デザイン、実装、ライティングまで独自で行う。</p>
                         </li>
                     </ul>

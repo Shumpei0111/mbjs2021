@@ -15,7 +15,6 @@ PHPmyAdminもついているので、これだけで簡単に始められちゃ�
 
 [MAMP](https://www.mamp.info/en/mamp/)
 
-<!-- toc -->
 
 ## 状況
 
