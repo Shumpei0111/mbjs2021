@@ -16,7 +16,6 @@ tags: [javascript]
 
 とても気に入っている方法です。
 
-<!-- toc -->
 
 # URLパラメータをJSのfilterとmapを使って作る
 

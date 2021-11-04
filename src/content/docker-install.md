@@ -16,8 +16,6 @@ Dockerを使ってLAMP（Linux Apache MySQL PHP）環境を構築していきま
 宜しくお願いします。
 
 
-<!-- toc -->
-
 {% twitter https://twitter.com/seventhseven/status/1149729098492604416 %}
 
 名前だけ聞いたことのあるXAMPを手がかりにしていたのですが、

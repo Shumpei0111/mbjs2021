@@ -7,7 +7,6 @@ tags: [プログラミング学習]
 こんばんは、夜行性のShumpei[(@seventhseven)](https://twitter.com/seventhseven)です。
 今回は、最近学習していたり、取り組んでいることについて書きたいと思います。
 
-<!-- toc -->
 
 ## 長期的・短期的目標
 

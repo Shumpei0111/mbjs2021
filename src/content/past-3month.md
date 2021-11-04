@@ -10,7 +10,6 @@ tags: [Javascript, キャリア]
 
 [前回の話](https://www.mb-js.tokyo/2019/07/05/job-change-completed/)
 
-<!-- toc -->
 
 ## アバン
 こんにちは、Shumpei[(@seventhseven)](https://twitter.com/seventhseven)です。
