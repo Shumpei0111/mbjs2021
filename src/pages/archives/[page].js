@@ -31,6 +31,7 @@ export default function Archive(props) {
                     total={total} perPage={perPage}
                     href='/archives/[page]' callBack={(page) => `/archives/${page}`} />
             </div>
+            <TopMarquee />
         </Layout>
     )
 }
