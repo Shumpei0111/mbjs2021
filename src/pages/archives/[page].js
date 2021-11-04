@@ -2,6 +2,7 @@ import fs from 'fs';
 
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import TopMarquee from '../../components/TopMarquee';
 import { Pagination } from '../../components/Pagination';
 import { listContentFiles, readContentFiles } from '../../lib/content-loader';
 import arrangeDate from '../../lib/arrange-date';
@@ -60,15 +61,6 @@ export async function getStaticProps({ params }) {
 
 
 export async function getStaticPaths() {
-    // const posts = ((context) => {
-    //     const keys = context.keys();
-    //     const data = keys.map((key, ind) => {
-    //         let slug = key.replace(/^.*[\\\/]/, '').slice( 0, -3 );
-    //         return slug;
-    //     });
-
-    //     return data;
-    // })(require.context('../../content/', true, /\.md$/));
     const posts = await listContentFiles({ fs });
 
     const pages = range(Math.ceil(posts.length / COUNT_PER_PAGE));

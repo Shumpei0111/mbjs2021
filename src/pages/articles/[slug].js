@@ -9,6 +9,25 @@ import gfm from 'remark-gfm';
 import * as style from '../../styles/module/_page_singleBlog.module.scss';
 
 const SingleBlog = (props) => {
+    const H1 = ({ node, ...props }) => {
+        return (
+            <h1 id={node.position?.start.line.toString()}>{props.children}</h1>
+        );
+    }
+
+    const H2 = ({ node, ...props }) => {
+        return (
+            <h2 id={node.position?.start.line.toString()}>{props.children}</h2>
+        );
+    }
+
+    const ankerLink = ({ node, ...props }) => {
+        return (
+            <a href={"#"+node.position?.start.line.toString()}>{props.children}</a>
+        );
+    }
+
+
     return (
         <Layout>
             <div className={style.singleBlog}>
@@ -16,8 +35,24 @@ const SingleBlog = (props) => {
                     {props.frontmatter.title}
                     <span className={style.singleBlog__date}>posted at: {arrangeDate(props.frontmatter.date)}</span>
                 </p>
+
+                {/** 目次 */}
+                <div className={style.singleBlog__toc}>
+                    <p className={style.singleBlog__toc__cont}>[CONTENTS]</p>
+                    <ReactMarkdown
+                        allowedElements={["h1", "h2"]}
+                        components={{
+                            h1: ankerLink,
+                            h2: ankerLink,
+                        }}
+                    >
+                        {props.markdownBody}
+                    </ReactMarkdown>
+                </div>
+
+                {/** 本文 */}
                 <ReactMarkdown
-                    components={{code: CodeBlock}}
+                    components={{code: CodeBlock, h1: H1, h2: H2}}
                     remarkPlugins={[gfm]}
                 >
                     {props.markdownBody}
