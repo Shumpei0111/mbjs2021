@@ -24,7 +24,7 @@ const Footer = () => {
                     <Link href='/contact'><a>Contact</a></Link>
                 </li>
             </ul>
-            <address translate='no' className={style.footer__address}>copyright 2021 Shumpei All Rights Reserved.</address>
+            <address translate='no' className={style.footer__address}>MB.js | copyright 2021 Shumpei All Rights Reserved.</address>
         </footer>
     )
 };

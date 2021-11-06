@@ -6,13 +6,10 @@ const Projects = () => {
         <div className={style.projects}>
             <h2 className={style.projects__h2}>PROJECTS</h2>
             <div className={style.projects__mainContents}>
-                <div className={style.projects__globalCaption}>
-                    <p>個人活動 / Personal Projects</p>
-                    <p>自主制作のWebアプリやWebサイト、同人活動における記録。</p>
-                </div>
+                <h3 className={style.projects__h3}>個人活動 / Personal Projects</h3>
 
                 <div className={`${style.projects__genreContainer}`}>
-                    <p className={style.projects__genreTitle}>Webアプリ&Webサイト&nbsp;|&nbsp;WebApp&WebSite</p>
+                    <p className={style.projects__genreTitle}>ウェブアプリ,ウェブサイト&nbsp;|&nbsp;WebApp,WebSite</p>
                     <p className={`${style.projects__bgTitle} ${style.projects__bgTitleMarquee}`} data-title='APP&SITE'>APP&SITE</p>
                     <ul>
                         <li>
@@ -72,6 +69,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
+            <p className={style.projects__ceparate}>*</p>
         </div>
     )
 };
