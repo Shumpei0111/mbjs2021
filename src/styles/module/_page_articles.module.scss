@@ -11,15 +11,21 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    max-width: 768px;
+    max-width: 728px;
     min-width: v.$min-width;
     margin: auto;
     position: relative;
 
+    .article__about {
+        text-align: center;
+        margin-bottom: 48px;
+        font-size: 1.2rem;
+    }
+
     .articleWrapper {
         margin-bottom: 40px;
         display: inline-block;
-        padding-left: 200px;
+        padding-left: 160px;
         
         .articleLink {
             display: inline-flex;
@@ -38,9 +44,11 @@
             }
 
             .articleTitle {
+                margin-bottom: 8px;
             }
 
             .postedDate {
+                text-align: right;
             }
         }
     }

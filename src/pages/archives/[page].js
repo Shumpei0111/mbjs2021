@@ -17,6 +17,8 @@ export default function Archive(props) {
         <Layout>
             <h2 className={style.article__h2}>BLOG</h2>
             <div className={style.articleContainer}>
+                <p className={style.article__about}>個人の学習の記録、または成果物の記録</p>
+                <p className={style.article__about}>*</p>
                 {posts.map((post) => 
                     <div className={style.articleWrapper} key={post.slug}>
                         <Link href='/articles/[slug]' as={`/articles/${post.slug}`}>
