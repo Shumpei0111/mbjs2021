@@ -134,12 +134,35 @@
         
         .centerBorder {
             width: 1px;
-            height: 60px;
+            height: 71px;
             border: 1px solid;
             position: absolute;
+            top: 22px;
             left: 50%;
-            transform: translate(-50%, 50%);
+            transform: translate3d(-50%, 0, 0);
             opacity: .2;
+            animation: line_loop 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
         }
+    }
+}
+
+@keyframes line_loop {
+    0% {
+        height: 0px;
+    }
+
+    45% {
+        height: 71px;
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    90% {
+        transform: translate3d(-50%, 71px, 0);
+        height: 0px;
+    }
+
+    100% {
+        transform: translate3d(-50%, 71px, 0);
+        height: 0px;
     }
 }

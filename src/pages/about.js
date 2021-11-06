@@ -1,14 +1,24 @@
+import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import TopMarquee from '../components/TopMarquee';
 import Image from 'next/image';
 import Link from 'next/link'
 
 import * as style from '../styles/module/_page_about.module.scss';
+import * as fadein from '../styles/module/_fadein.module.scss';
 
 const About = () => {
     const devide = 2;
     const imgWidth = (1200 / devide);
     const imgHeight = (800 / devide);
+
+    const [fadeIn, setFadeIn] = useState( false );
+    useEffect(() => {
+        setTimeout(() => {
+            setFadeIn( true );
+        }, 600);
+    }, []);
+
 
     return (
         <Layout>
@@ -17,7 +27,9 @@ const About = () => {
                 <div className={style.aboutVisual}>
                     <div className={style.names}>
                         <h3 className={style.profile__name}>Shumpei</h3>
-                        <p className={style.profile__baseIn}>Base In Tokyo, Japan</p>
+                        <p className={`${style.profile__baseIn} ${style.profile__iam}`}>Base In Tokyo, Japan</p>
+                        <p className={style.profile__iam}>フロントエンド・デベロッパー</p>
+                        <p className={style.profile__iam}>同人作家</p>
 
                         <ul className={style.profle__snsList}>
                             <li><Link href='https://twitter.com/seventhseven'><a target='_blank' rel='noopener'>Twitter</a></Link></li>
@@ -25,13 +37,14 @@ const About = () => {
                             <li><Link href='https://www.pixiv.net/users/91629'><a target='_blank' rel='noopener'>Pixiv</a></Link></li>
                         </ul>
                     </div>
-                    <Image
-                        src='/images/profile.jpg'
-                        alt='profile photo'
-                        width={imgWidth}
-                        height={imgHeight}
-                    />
-                    
+                    <div className={`${style.profile__img} ${fadein.animation} ${fadeIn ? fadein.active: ''}`}>
+                        <Image
+                            src='/images/profile.jpg'
+                            alt='profile photo'
+                            width={imgWidth}
+                            height={imgHeight}
+                        />
+                    </div>
                 </div>
 
                 <div className={style.line}></div>

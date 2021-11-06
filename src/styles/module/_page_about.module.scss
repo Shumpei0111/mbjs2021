@@ -31,6 +31,12 @@
                 text-align: right;
             }
 
+            .profile__iam {
+                margin-bottom: 20px;
+                text-align: right;
+                word-break: keep-all;
+            }
+
             .profle__snsList {
                 display: flex;
                 justify-content: flex-end;
@@ -49,6 +55,12 @@
                         padding-left: 8px;
                     }
                 }
+            }
+        }
+
+        .profile__img {
+            &:hover {
+                cursor: pointer;
             }
         }
     }

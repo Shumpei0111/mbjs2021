@@ -10,7 +10,7 @@ const FirstView = () => {
         setTimeout(() => {
             setImgFadeIn( true );
         }, 100);
-    })
+    },[])
     
     useEffect(() => {
         setTimeout(() => {

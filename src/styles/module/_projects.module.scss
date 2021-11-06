@@ -2,7 +2,7 @@
 
 .projects {
     position: relative;
-    margin: 150px 0;
+    margin: 150px 0 100px;
     padding: 150px 0;
     overflow: hidden;
 
@@ -12,14 +12,29 @@
         left: 0;
     }
 
+    &__h3 {
+        margin-bottom: 60px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    &__ceparate {
+        text-align: center;
+        font-size: 2rem;
+    }
+
     &__mainContents {
         display: flex;
         flex-direction: column;
 
         .projects__globalCaption {
-            line-height: 3;
             margin-bottom: 32px;
             padding-left: 40%;
+
+            p {
+                line-height: 1.6;
+            }
         }
 
         .projects__genreContainer {
@@ -35,7 +50,7 @@
             .projects__bgTitle {
                 position: absolute;
                 font-size: 30rem;
-                opacity: .2;
+                opacity: .1;
 
                 &:before {
                     content: attr(data-title);
