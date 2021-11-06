@@ -1,0 +1,105 @@
+@use './variables.module' as v;
+
+
+.about__h2 {
+    position: absolute;
+    left: 0;
+    top: 40%;
+}
+
+.aboutContainer {
+    width: 100%;
+    max-width: 768px;
+    min-width: v.$min-width;
+    margin: 0 auto 300px;
+    position: relative;
+
+    .aboutVisual {
+        position: relative;
+        display: flex;
+        margin-bottom: 80px;
+
+        .names {
+            margin-right: 32px;
+            .profile__name {
+                font-size: 4rem;
+                margin-bottom: 8px;
+            }
+
+            .profile__baseIn {
+                margin-bottom: 20px;
+                text-align: right;
+            }
+
+            .profle__snsList {
+                display: flex;
+                justify-content: flex-end;
+
+                li {
+                    a:hover {
+                        color: v.$c-white;
+                    }
+                }
+
+                li:not(:last-of-type) {
+                    padding-right: 8px;
+
+                    &:after {
+                        content: '/';
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .line {
+        width: 60px;
+        height: 1px;
+        background-color: v.$c-primary;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+
+    $headWidth: 26%;
+    .profile__head {
+        font-size: 1.4rem;
+        margin: 16px 0 16px;
+        width: $headWidth;
+
+    }
+
+    .profile__motto {
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        margin-bottom: 80px;
+
+        &__detail {
+            max-width: 500px;
+            width: calc( 100% - $headWidth );
+
+            li {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .profile__detail {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 80px;
+
+        .profile__detail__wrapper {
+            max-width: 500px;
+            width: calc( 100% - $headWidth );
+        }
+
+        &__item {
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+    }
+
+    
+}
