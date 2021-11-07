@@ -1,0 +1,52 @@
+@use './variables.module' as v;
+
+
+.contact__h2 {
+    position: absolute;
+    left: 0;
+    top: 40%;
+}
+
+.contactContainer {
+    width: 100%;
+    max-width: 768px;
+    min-width: v.$min-width;
+    margin: 0 auto 300px;
+    position: relative;
+
+    p {
+        font-size: 2rem;
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+    }
+
+    .contact__mail {
+        font-size: 3rem;
+        margin-bottom: 40px;
+        display: block;
+        text-decoration: underline;
+    }
+
+    .contact__dot {
+        &:after {
+            content: '.';
+        }
+    }
+
+    .contact__atmark {
+        &:after {
+            content: '@';
+        }
+    }
+
+    .contact__sns {
+
+        li {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+    }
+}

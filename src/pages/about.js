@@ -32,9 +32,9 @@ const About = () => {
                         <p className={style.profile__iam}>同人作家</p>
 
                         <ul className={style.profle__snsList}>
-                            <li><Link href='https://twitter.com/seventhseven'><a target='_blank' rel='noopener'>Twitter</a></Link></li>
-                            <li><Link href='https://github.com/Shumpei0111'><a target='_blank' rel='noopener'>GitHub</a></Link></li>
-                            <li><Link href='https://www.pixiv.net/users/91629'><a target='_blank' rel='noopener'>Pixiv</a></Link></li>
+                            <li><Link href='https://twitter.com/seventhseven'><a target='_blank' rel='noopener'>Twitter / @seventhseven</a></Link></li>
+                            <li><Link href='https://github.com/Shumpei0111'><a target='_blank' rel='noopener'>GitHub / Shumpei0111</a></Link></li>
+                            <li><Link href='https://www.pixiv.net/users/91629'><a target='_blank' rel='noopener'>Pixiv / なな爺</a></Link></li>
                         </ul>
                     </div>
                     <div className={`${style.profile__img} ${fadein.animation} ${fadeIn ? fadein.active: ''}`}>
