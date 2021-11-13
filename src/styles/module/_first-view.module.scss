@@ -8,6 +8,18 @@
     min-width: v.$min-width;
     margin: auto;
 
+    &__arm {
+        position: absolute;
+        top: -30%;
+        left: 120px;
+    }
+
+    &__sign {
+        position: absolute;
+        top: 60%;
+        left: 40%;
+    }
+
     &__container {
         position: absolute;
         right: 0;

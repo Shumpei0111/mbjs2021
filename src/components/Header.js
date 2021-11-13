@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import Hamburger from './Hamburger';
@@ -20,6 +20,15 @@ const Header = () => {
         if( !open ) setOpen( true );
         else setOpen( false );
     }
+
+    useEffect(() => {
+        if( open ) {
+            document.documentElement.style.overflowY = 'hidden';
+        } else {
+            document.documentElement.style.overflowY = '';
+
+        }
+    }, [open])
 
 
     return (

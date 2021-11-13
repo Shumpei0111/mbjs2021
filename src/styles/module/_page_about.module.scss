@@ -39,28 +39,33 @@
 
             .profle__snsList {
                 display: flex;
+                flex-direction: column;
                 justify-content: flex-end;
 
                 li {
+                    margin-bottom: 16px;
+                    text-align: right;
                     a:hover {
                         color: v.$c-white;
-                    }
-                }
-
-                li:not(:last-of-type) {
-                    padding-right: 8px;
-
-                    &:after {
-                        content: '/';
-                        padding-left: 8px;
                     }
                 }
             }
         }
 
         .profile__img {
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+
             &:hover {
                 cursor: pointer;
+                -webkit-filter: grayscale(0%);
+                -moz-filter: grayscale(0%);
+                -ms-filter: grayscale(0%);
+                -o-filter: grayscale(0%);
+                filter: grayscale(0%);
             }
         }
     }

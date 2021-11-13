@@ -50,6 +50,9 @@ const Hamburger = (props) => {
                                 onMouseLeave={toggleContactHover}>Contact</a>
                             </Link>
                         </li>
+                        <li>
+                            <Link href='/'><a className={style.burger__homeLink}><span>HOME</span></a></Link>
+                        </li>
                     </ul>
                 </div>
                 <p className={style.burgerMenu__siteTitle}>Shumpei portfolio - [MB.js]</p>

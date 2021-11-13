@@ -1,0 +1,7 @@
+@use './variables.module' as v;
+
+.projectSwiper__wrapper {
+    .projectWiper__next {
+        color: red;
+    }
+}
