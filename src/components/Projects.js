@@ -35,7 +35,7 @@ const Projects = () => {
                                 <li>インフラ：Firebase Hosting</li>
                                 <li>制作期間：1ヶ月</li>
                                 <li>企画、調査、デザイン、ライティング、実装</li>
-                                <li><Link href="https://github.com/Shumpei0111/obake-lp"><a target="_blank" ref="noopener">GitHub</a></Link></li>
+                                <li><Link href="https://github.com/Shumpei0111/obake-lp"><a target="_blank" rel="noopener">GitHub</a></Link></li>
                             </ul>
                         </li>
                         <li>
@@ -58,7 +58,7 @@ const Projects = () => {
                                 <li>インフラ：Netlify</li>
                                 <li>制作期間：1週間</li>
                                 <li>企画、調査、デザイン、実装</li>
-                                <li><Link href="https://github.com/Shumpei0111/resort_anthem"><a target="_blank" ref="noopener">GitHub</a></Link></li>
+                                <li><Link href="https://github.com/Shumpei0111/resort_anthem"><a target="_blank" rel="noopener">GitHub</a></Link></li>
                             </ul>
                         </li>
                         <li>
@@ -81,7 +81,7 @@ const Projects = () => {
                                 <li>インフラ：Firebase Hosting</li>
                                 <li>制作期間：1ヶ月</li>
                                 <li>調査、デザイン(LP、パッケージ、ロゴ)、実装</li>
-                                <li><Link href="https://github.com/Shumpei0111/villains_homme"><a target="_blank" ref="noopener">GitHub</a></Link></li>
+                                <li><Link href="https://github.com/Shumpei0111/villains_homme"><a target="_blank" rel="noopener">GitHub</a></Link></li>
                             </ul>
                         </li>
                     </ul>
