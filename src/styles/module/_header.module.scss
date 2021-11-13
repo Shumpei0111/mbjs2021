@@ -52,11 +52,19 @@
             transition: .4s cubic-bezier(0.23,1,0.32,1);
             text-align: right;
         }
+
+        &:hover {
+            .burger__bar {
+                transition: .2s ease;
+                background-color: v.$c-white;
+            }
+        }
     }
 
     .burger__open {
         .burger__bar:nth-child(1) {
-            transform: rotate(45deg) translate3d(6px, 6px, 0);
+            transform: rotate(45deg) translate3d(0, 0, 0);
+            position: fixed;
         }
 
         .burger__bar:nth-child(2) {
@@ -64,7 +72,8 @@
         }
 
         .burger__bar:nth-child(3) {
-            transform: rotate(-45deg) translate3d(6px, -6px, 0);
+            transform: rotate(-45deg) translate3d(0, 0, 0);
+            position: fixed;
         }
 
         .burger__str {

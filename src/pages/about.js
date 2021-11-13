@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Layout from '../components/Layout';
 import TopMarquee from '../components/TopMarquee';
 import Image from 'next/image';
@@ -16,7 +18,7 @@ const About = () => {
     useEffect(() => {
         setTimeout(() => {
             setFadeIn( true );
-        }, 600);
+        }, 200);
     }, []);
 
 
@@ -32,8 +34,8 @@ const About = () => {
                         <p className={style.profile__iam}>同人作家</p>
 
                         <ul className={style.profle__snsList}>
-                            <li><Link href='https://twitter.com/seventhseven'><a target='_blank' rel='noopener'>Twitter / @seventhseven</a></Link></li>
-                            <li><Link href='https://github.com/Shumpei0111'><a target='_blank' rel='noopener'>GitHub / Shumpei0111</a></Link></li>
+                            <li><Link href='https://twitter.com/seventhseven'><a target='_blank' rel='noopener'><FontAwesomeIcon icon={faTwitter} /> / @seventhseven</a></Link></li>
+                            <li><Link href='https://github.com/Shumpei0111'><a target='_blank' rel='noopener'><FontAwesomeIcon icon={faGithub} /> / Shumpei0111</a></Link></li>
                             <li><Link href='https://www.pixiv.net/users/91629'><a target='_blank' rel='noopener'>Pixiv / なな爺</a></Link></li>
                         </ul>
                     </div>

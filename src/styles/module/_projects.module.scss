@@ -14,9 +14,20 @@
 
     &__h3 {
         margin-bottom: 60px;
-        font-size: 1.6rem;
+        font-size: 8rem;
         font-weight: 500;
+        // padding-left: 40%;
         text-align: center;
+
+        &:after {
+            content: '';
+            height: 1px;
+            width: 600px;
+            background-color: v.$c-primary;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
     }
 
     &__ceparate {
@@ -38,7 +49,8 @@
         }
 
         .projects__genreContainer {
-            margin-bottom: 160px;
+            margin-top: 120px;
+            margin-bottom: 120px;
             position: relative;
 
             .projects__genreTitle {
@@ -80,6 +92,20 @@
                 }
             }
 
+            .projects__list {
+
+                li {
+                    max-width: 600px;
+                }
+
+                img {
+                    transition: all .4s .1s cubic-bezier(.455, .03, .515, .955);
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+
             .projects__name {
                 font-size: 2.4rem;
                 margin-bottom: 16px;
@@ -89,7 +115,6 @@
                 content: '';
                 font-size: 1.6rem;
                 position: absolute;
-                top: -10px;
                 left: -20px;
             }
 
@@ -105,8 +130,34 @@
                 content: '03';
             }
 
+            .projects__item {
+                position: relative;
+                margin-bottom: 32px;
+            }
+
+            .projects__date {
+                transform: rotate(90deg);
+                position: absolute;
+                margin: 24px -16px;
+                bottom: 0;
+            }
+
             .projects__pjCaption {
                 line-height: 1.6;
+                margin-bottom: 24px;
+            }
+
+            .projects__pj__stack {
+                padding-left: 24px;
+                
+                li {
+                    margin-bottom: 16px;
+                }
+            }
+
+            .illustSwiper__wrapper {
+                margin-bottom: 64px;
+                padding-left: 40%;
             }
 
             .projects__circleTop {
@@ -120,8 +171,13 @@
                     padding-left: 40%;
                 }
 
+                &__hanpuWrapper {
+                    margin-top: 16px;
+                    margin-left: 16px;
+                }
+
                 &__distribution {
-                    display: flex;
+                    // display: flex;
 
                     ul {
                         display: flex;
@@ -129,7 +185,13 @@
                         padding-left: 0;
 
                         li {
-                            padding-right: 24px;
+                            padding-right: 16px;
+                            margin-top: 8px;
+
+                            &:after {
+                                content: '/';
+                                padding-left: 16px;
+                            }
                         }
                     }
                 }

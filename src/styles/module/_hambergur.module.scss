@@ -42,6 +42,10 @@
         transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 2.5s, opacity linear 0.7s;
         font-size: 12rem;
 
+        &:nth-of-type(3) {
+            margin-bottom: 40px;
+        }
+
         @for $i from 1 through 3 {
             &:nth-of-type(#{$i})::before {
                 content: '#{$i}';
@@ -64,6 +68,22 @@
 
         a {
             text-decoration: line-through 10px solid v.$c-primary;
+        }
+    }
+
+    .burger__homeLink {
+        text-align: center;
+        display: block;
+        margin: auto;
+
+        span {
+            border: 1px solid;
+            border-radius: 50%;
+            padding: 8px 24px;
+
+            &:hover {
+                color: v.$c-white;
+            }
         }
     }
 
@@ -94,6 +114,12 @@
     position: fixed;
 
     .burgerMenuItem {
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .burger__homeLink {
         display: block;
         opacity: 0;
         pointer-events: none;
