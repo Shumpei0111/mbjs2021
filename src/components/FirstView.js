@@ -25,18 +25,10 @@ const FirstView = () => {
         <div className={style.firstView}>
             <div className={`${style.firstView__arm} ${fadein.animation} ${imgFadeIn ? fadein.active: ''}`}>
                 <Image
-                    src='/images/bg_arm.png'
+                    src='/images/arm_and_sign.png'
                     alt='arm'
-                    width={1836/4}
-                    height={3486/4}
-                />
-            </div>
-            <div  className={`${style.firstView__sign} ${fadein.animation} ${imgFadeIn ? fadein.active: ''}`}>
-                <Image
-                    src='/images/sign.png'
-                    alt='sign'
-                    width={1280/10}
-                    height={1440/10}
+                    width={2040/4}
+                    height={3680/4}
                 />
             </div>
             <div className={`${style.firstView__container} ${fadein.animation} ${fadeIn ? fadein.active: ''}`}>
