@@ -40,12 +40,16 @@ const About = () => {
                         </ul>
                     </div>
                     <div className={`${style.profile__img} ${fadein.animation} ${fadeIn ? fadein.active: ''}`}>
-                        <Image
-                            src='/images/profile.jpg'
-                            alt='profile photo'
-                            width={imgWidth}
-                            height={imgHeight}
-                        />
+                        <Link href='https://twitter.com/seventhseven'>
+                            <a target='_blank' rel='noopener'>
+                                <Image
+                                    src='/images/profile.jpg'
+                                    alt='profile photo'
+                                    width={imgWidth}
+                                    height={imgHeight}
+                                />
+                            </a>
+                        </Link>
                     </div>
                 </div>
 
