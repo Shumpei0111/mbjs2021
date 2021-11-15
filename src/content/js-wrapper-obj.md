@@ -19,7 +19,7 @@ tags: [javascript]
 
 ### 不思議に思ったこと
 
-  ```
+  ```js
   const falsy = "false";
 
   if(falsy) {

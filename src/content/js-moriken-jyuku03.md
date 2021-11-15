@@ -36,7 +36,7 @@ tags: [javascript]
 
 - HTML
 
-```
+```html
 <div class='kadai-9'>
     <p>課題9</p>
     <div class='kadai-9-wrapper'>
@@ -48,7 +48,7 @@ tags: [javascript]
 
 - JS
 
-```
+```js
 const kadai9 = function() {
     const $ = document.getElementById( 'kadai9Ul' );
     const $loading = document.getElementById( 'isLoading-kadai9' );
@@ -137,7 +137,7 @@ itemsは名前からして配列が返ってくる感じにできてるか、若
 
 - HTML
 
-```
+```html
 <div class='kadai-10'>
     <p>課題10</p>
     <div class='kadai-10-wrapper'>
@@ -149,7 +149,7 @@ itemsは名前からして配列が返ってくる感じにできてるか、若
 
 - JS
 
-```
+```js
 const kadai10 = function() {
     const $ = document.getElementById( 'kadai10Ul' );
     const $loading = document.getElementById( 'isLoading-kadai10' );
@@ -231,7 +231,7 @@ Promiseで書いているんだし、then/catchでもいいかもしれません
 
 解決中に判定して絶対コケない処理をしたいという時に有効なのかな？と思いました。
 
-```
+```js
 const getContentAsync = () => new Promise( (resolve, _) => {
     try {
         // setTimeout( () => {
@@ -264,7 +264,7 @@ const getContentAsync = () => new Promise( (resolve, _) => {
 
 簡易的なAPIを使って同じことを[こちら](https://jsondata.okiba.me)のサイトに
 
-```
+```json
 { "data": [
   {
     "a": "bookmark",
@@ -289,7 +289,7 @@ const getContentAsync = () => new Promise( (resolve, _) => {
 
 - HTML
 
-```
+```html
 <div class='kadai-11'>
     <p>課題11</p>
     <div class='kadai-11-wrapper'>
@@ -302,7 +302,7 @@ const getContentAsync = () => new Promise( (resolve, _) => {
 
 - JS
 
-```
+```js
 const kadai11 = function() {
     const $ = document.getElementById( 'kadai11Ul' );
     const $loading = document.getElementById( 'isLoading-kadai11' );
@@ -378,7 +378,7 @@ JSON Okibaというサービスを初めて知りました。
 
 fetchメソッドを使ったことがなかったですが、Promiseが返ってくるなら書き方が想像できます。
 
-```
+```js
 function getElmContents() {
     return fetch( 'https://jsondata.okiba.me/v1/json/ydbaQ210312030342' )
             .then( res => res.json() )
@@ -391,7 +391,7 @@ thenしか書いてないですが、ちゃんと書くならcatchも書いて�
 
 あとはawaitで使う`getContentAsync`でこのメソッドを叩きます。
 
-```
+```js
 const getContentAsync = () => new Promise( (resolve, _) => {
     try {
         // setTimeout( () => {

@@ -1,6 +1,5 @@
-import { CodeComponent } from "react-markdown/lib/ast-to-react";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { hopscotch } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const CodeBlock = ({ inline, className, children }) => {
     if( inline ) {
@@ -14,7 +13,7 @@ const CodeBlock = ({ inline, className, children }) => {
         <div>
             <div>{name}</div>
             <SyntaxHighlighter
-                style={hopscotch}
+                style={darcula}
                 language={lang}
             >
                 {String(children).replace(/\n$/, '')}

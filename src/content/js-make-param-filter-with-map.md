@@ -21,7 +21,7 @@ tags: [javascript]
 
 具体的にはこんな感じです。
 
-```
+```js
 const targetUrl = '../index.html?' + [
     ['paramA', code],
     ['paramB', Config.settingA && settingAKey],
@@ -38,7 +38,7 @@ const targetUrl = '../index.html?' + [
 
 ## ざっくり解説
 
-```
+```js
 const targetUrl = '../index.html?' + [
     ['paramA', code],
     ['paramB', Config.settingA && settingAKey],
@@ -51,7 +51,7 @@ const targetUrl = '../index.html?' + [
 
 また、**paramB**〜**paramD**のように条件を設定して、trueならパラメータとして有効にしたいものを設定します。
 
-```
+```js
 .filter( function( p ) {
     return !!p[ 1 ];
 } )
@@ -65,7 +65,7 @@ const targetUrl = '../index.html?' + [
 
 また、値の前に`!!`をつけると真偽値を返してくれるようになります。
 
-```
+```js
 .map( function( p ) {
     return p.map( function( v ) {
         return encodeURIComponent( v.trim() );
@@ -79,7 +79,7 @@ const targetUrl = '../index.html?' + [
 
 内側のmapは、上記で取り出された配列をキーと値をそれぞれ分解して処理を行います。
 
-```
+```js
 p.map( function( v ) {
         return encodeURIComponent( v.trim() );
     } ).join( '=' );
@@ -93,7 +93,7 @@ v.trim()で余計な空白を取り除きます。
 
 そして最後にjoinで「`キー=値`」としてパラメータとして組み立てます。
 
-```
+```js
 } ).join( '&' );
 ```
 そして最後に内側のループで作ったパラメータのペアが複数あるので、`&`で繋いで完成です。

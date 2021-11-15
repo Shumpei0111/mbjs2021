@@ -38,7 +38,7 @@ tags: [javascript]
 
 ### 1.このDOMをhtml内のulの中に差し込んでください
 
-```
+```html
 <li>これです</li>
 ```
 
@@ -46,7 +46,7 @@ tags: [javascript]
 
 - HTML
 
-```
+```html
 <div class='kadai-1'>
     <p>課題1</p>
     <ul id='kadai1Ul'></ul>
@@ -55,7 +55,7 @@ tags: [javascript]
 
 - JS
 
-```
+```js
 const kadai1 = function() {
     const $ = document.getElementById( 'kadai1Ul' );
     const newLi = document.createElement( 'li' );
@@ -66,7 +66,7 @@ const kadai1 = function() {
 }
 ```
 
-```
+```js
 function init() {
     kadai1();
 }
@@ -89,7 +89,7 @@ init();
 
 ### 2.このDOMをJavaScriptでつくり、html内のulの中に差し込んでください
 
-```
+```html
 <li>
   <a href="1.html"><img src="bookmark.png" alt="ブックマーク" />これです</a>
 </li>
@@ -99,7 +99,7 @@ init();
 
 - HTML
 
-```
+```html
 <div class='kadai-2'>
     <p>課題2</p>
     <ul id='kadai2Ul'></ul>
@@ -108,7 +108,7 @@ init();
 
 - JS
 
-```
+```js
 const kadai2 = function() {
     const $ = document.getElementById( 'kadai2Ul' );
     
@@ -153,7 +153,7 @@ const kadai2 = function() {
 
 ### 3.このDOMをJavaScriptでつくり、html内のulの中に差し込んでください
 
-```
+```html
 <ul>
   <li><a href="a1.html"><img src="/img/bookmark.png">a1</li>
   <li><a href="a2.html"><img src="/img/bookmark.png">a2</li>
@@ -164,7 +164,7 @@ const kadai2 = function() {
 
 - HTML
 
-```
+```html
 <div class='kadai-3'>
     <p>課題3</p>
     <ul id='kadai3Ul'></ul>
@@ -173,7 +173,7 @@ const kadai2 = function() {
 
 - JS
 
-```
+```js
 const kadai3 = function() {
     const $ = document.getElementById( 'kadai3Ul' );
 
@@ -235,13 +235,13 @@ const kadai3 = function() {
 
 - 配列
 
-```
+```js
 [{to: "bookmark.html", img: "1.png", alt:"画像1", text: "ブックマーク"}, {to: "message.html", img: "2.png", alt:"画像2", text: "メッセージ"}]
 ```
 
 - DOM
 
-```
+```html
 <ul>
  <li><a href="/bookmark.html"><img src="1.png" alt="画像1">ブックマーク</a></li>
  <li><a href="/message.html"><img src="2.png" alt="画像2">メッセージ</a></li>
@@ -252,7 +252,7 @@ const kadai3 = function() {
 
 - HTML
 
-```
+```html
 <div class='kadai-4'>
     <p>課題4</p>
     <ul id='kadai4Ul'></ul>
@@ -261,7 +261,7 @@ const kadai3 = function() {
 
 - JS
 
-```
+```js
 const kadai4 = function() {
     const $ = document.getElementById( 'kadai4Ul' );
 
@@ -320,13 +320,13 @@ const kadai4 = function() {
 
 - 配列
 
-```
+```js
 [{to: "bookmark.html", img: "1.png", alt:"画像1", text: "ブックマーク"}, {to: "message.html", img: "2.png", alt:"画像2", text: "メッセージ"}]
 ```
 
 - DOM
 
-```
+```html
 <ul>
  <li><a href="/bookmark.html"><img src="1.png" alt="画像1">ブックマーク</a></li>
  <li><a href="/message.html"><img src="2.png" alt="画像2">メッセージ</a></li>
@@ -337,7 +337,7 @@ const kadai4 = function() {
 
 - HTML
 
-```
+```html
 <div class='kadai-5'>
     <p>課題5</p>
     <ul id='kadai5Ul'></ul>
@@ -346,7 +346,7 @@ const kadai4 = function() {
 
 - JS
 
-```
+```js
 const kadai5 = function() {
     const $ = document.getElementById( 'kadai5Ul' );
 

@@ -17,7 +17,7 @@ tags: [javascript]
 
 1. オブジェクトの配列を用意する
 
-```
+```js
 const itemArr = [
   {
     name: "mic",
@@ -36,13 +36,13 @@ const itemArr = [
 
 2. キャッシュ用の殻配列を用意する
 
-```
+```js
 const cacheArr = [];
 ```
 
 3. for文を回して任意の値をキャッシュ配列に入れていく
 
-```
+```js
 function addCache(arr) {
   for (let i = 0; i < arr.length; i++) {
     cacheArr.push(arr[i].name(or age, pamars, etc...))
@@ -54,7 +54,7 @@ addCache(itemArr);
 
 もしくは。pushを使わずに、`cacheArr[cacheArr.length]`に代入していきます。
 
-```
+```js
 function addCache(arr) {
   for (let i = 0; i < arr.length; i++) {
     cacheArr.push(arr[i].name(or age, pamars, etc...))
@@ -87,7 +87,7 @@ addCache(itemArr);
 
 そうしておくと、それらをラップしておく関数を作っておけば修正がしやすくなります。
 
-```
+```js
 function addInitCacheItems() {
     addCacheInitName();
     addCacheInitAge();

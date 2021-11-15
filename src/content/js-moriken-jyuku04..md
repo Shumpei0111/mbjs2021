@@ -33,7 +33,7 @@ tags: [javascript]
 
 - HTML
 
-```
+```html
 <div class='kadai-12'>
     <p>課題12</p>
     <div class='kadai-12-wrapper'>
@@ -48,7 +48,7 @@ tags: [javascript]
 
 - JS
 
-```
+```js
 const kadai12 = function() {
     const $ = document.getElementById( 'kadai12Ul' );
     const $loading = document.getElementById( 'isLoading-kadai12' );
@@ -142,13 +142,13 @@ const kadai12 = function() {
 
 HTMLにボタンを追加しました
 
-```
+```html
 <p id='req12Btn' style='margin: 0;padding:8px 16px;background-color: #b3b3b3;display: inline-block;border-radius: 3px;cursor: pointer;'>取得</p>
 ```
 
 JS側でイベントハンドラーを作って、最後に呼び出して登録しています。
 
-```
+```js
 function getItemsBy12 () {
         console.log( 'click' );
         $loading.style='display:block;'
@@ -170,7 +170,7 @@ FireFoxだとクリックした要素の値をもとに何かする場合、
 
 - HTML
 
-```
+```html
 <div class='kadai-13'>
     <p>課題13</p>
     <div class='kadai-13-wrapper'>
@@ -194,7 +194,7 @@ FireFoxだとクリックした要素の値をもとに何かする場合、
 
 - JS
 
-```
+```js
 const kadai13 = function() {
     const $ = document.getElementById( 'kadai13Ul' );
     const $loading = document.getElementById( 'isLoading-kadai13' );
@@ -306,7 +306,7 @@ const kadai13 = function() {
 
 HTMLにはモーダル用のラッパーコンテナを用意しました。
 
-```
+```html
 <p id='modalOpen13Btn' style='margin: 0;padding:8px 16px;background-color: #b3b3b3;display: inline-block;border-radius: 3px;cursor: pointer;'>取得する</p>
                 
 <div id='modalWrapper13' style='display:none'>
@@ -326,7 +326,7 @@ HTMLにはモーダル用のラッパーコンテナを用意しました。
 
 JSはモーダル開閉のハンドラとして、2つ用意しました。
 
-```
+```js
 function showModal() {
     $modalWrapper.style = 'display:block';
 }
@@ -338,7 +338,7 @@ function closeModal() {
 
 また、最後にそれを登録しておきます。
 
-```
+```js
 function initializeHandler() {
     $modalOpenBtn.addEventListener( 'click', showModal, false);
     $modalBack.addEventListener( 'click', closeModal, false );
@@ -364,7 +364,7 @@ initializeHandler();
 
 - HTML
 
-```
+```html
 <div class='kadai-14'>
     <p>課題14</p>
     <div class='kadai-14-wrapper'>
@@ -391,7 +391,7 @@ initializeHandler();
 
 - JS
 
-```
+```js
 const kadai14 = function() {
     const $ = document.getElementById( 'kadai14Ul' );
     const $loading = document.getElementById( 'isLoading-kadai14' );
@@ -503,7 +503,7 @@ const kadai14 = function() {
 
 モーダルにインプットの要素が入ってきましたので、labelとinputの紐づけを行いました。
 
-```
+```html
 <input type='number' name='num' id='num14'>
 <label for='num14'>
     <p id='req14Btn' style='margin: 0;padding:8px 16px;background-color: #b3b3b3;display: block;border-radius: 3px;margin: 0 auto;width: 90px;text-align: center; position: absolute;top:40%;left:30%;cursor: pointer;'>取得ボタン</p>
