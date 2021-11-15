@@ -27,7 +27,7 @@ MAMPでPHPの実行環境を用意して、HTMLテンプレートとしてPHPを
 
 今まで知っているGulpのホットリロードの方法は以下の通り。
 
-```
+```js
 var browserSync = require("browser-sync").create();
 
 // Browser Sync
@@ -52,7 +52,7 @@ gulp.task("server", function(done) {
 
 ブラウザシンクのタスクの中に、ポートを設定するところがあります。
 
-```
+```js
 browserSync.init({
     port: 8000,  <=== これ
     server: {
@@ -74,7 +74,7 @@ MAMP自身のApacheは別の80番ポートで開いています。
 
 ポートの設定は行いません。
 
-```
+```js
 // Browser Sync
 gulp.task("server", function(done) {
   browserSync.init({
@@ -89,7 +89,7 @@ gulp.task("server", function(done) {
 
 `watch`と`default`の部分は以下の通り。
 
-```
+```js
 // watch
 gulp.task("watch", function(done) {
   gulp

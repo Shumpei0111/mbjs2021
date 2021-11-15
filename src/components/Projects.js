@@ -139,7 +139,7 @@ const Projects = () => {
                                 <div className={style.projects__circle__distribution}>
                                     <div className={style.projects__overviewWrapper}>
                                         <h4>概要</h4>
-                                        <p className={style.projects__circle__genreName}>ジャンル：ガールズ&パンツァー</p>
+                                        <p className={style.projects__circle__genreName}>GENRE：ガールズ&パンツァー</p>
                                         <p>西 × ダジ本。相手を好きな気持ちに理由なんてない。そんな感情をぶつける2人の乙女の話。<br />他、ポストカード数種と色紙</p>
                                         <SeeWebSite type='pixiv' url='https://www.pixiv.net/artworks/59232048' />
                                     </div>
@@ -179,7 +179,7 @@ const Projects = () => {
                                 <div className={style.projects__circle__distribution}>
                                     <div className={style.projects__overviewWrapper}>
                                         <h4>概要</h4>
-                                        <p className={style.projects__circle__genreName}>ジャンル：ガールズ&パンツァー</p>
+                                        <p className={style.projects__circle__genreName}>GENRE：ガールズ&パンツァー</p>
                                         <p>西 × ダジ本。『ガールズ＆パンツァー 劇場版』後、親密になった彼女らのデートの様子を描きました。</p>
                                         <SeeWebSite type='pixiv' url='https://www.pixiv.net/artworks/57371698' />
                                     </div>
@@ -212,7 +212,7 @@ const Projects = () => {
                                 <div className={style.projects__circle__distribution}>
                                     <div className={style.projects__overviewWrapper}>
                                         <h4>概要</h4>
-                                        <p className={style.projects__circle__genreName}>ジャンル：艦隊これくしょん−艦これ−</p>
+                                        <p className={style.projects__circle__genreName}>GENRE：艦隊これくしょん−艦これ−</p>
                                         <p>大本営から「鎮守府をPRセヨ」という命令が与えられた鎮守府。<br />秘書艦の鳥海に押し付けたら、他の艦娘の協力もあって無事PR動画！...と思われたが。という本。</p>
                                         <SeeWebSite type='pixiv' url='https://www.pixiv.net/artworks/55104947' />
                                     </div>

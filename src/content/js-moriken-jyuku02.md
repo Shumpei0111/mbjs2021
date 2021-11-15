@@ -34,7 +34,7 @@ tags: [javascript]
 
 - HTML
 
-```
+```html
 <div class='kadai-6'>
     <p>課題6</p>
     <ul id='kadai6Ul'></ul>
@@ -43,7 +43,7 @@ tags: [javascript]
 
 - JS
 
-```
+```js
 const kadai6 = function() {
     const $ = document.getElementById( 'kadai6Ul' );
 
@@ -119,7 +119,7 @@ Promise内で`setTimeout`を使います。
 
 明示的に使わない引数ですとしています。
 
-```
+```js
 return new Promise( (resolve, _) => {
     setTimeout( () => {
         resolve( getElmContents() );
@@ -143,7 +143,7 @@ return new Promise( (resolve, _) => {
 
 - HTML
 
-```
+```html
 <div class='kadai-7'>
     <p>課題7</p>
     <div class='kadai-7-wrapper'>
@@ -155,7 +155,7 @@ return new Promise( (resolve, _) => {
 
 - JS
 
-```
+```js
 const kadai7 = function() {
     const $ = document.getElementById( 'kadai7Ul' );
     const $loading = document.getElementById( 'isLoading-kadai7' );
@@ -227,7 +227,7 @@ const kadai7 = function() {
 
 HTMLにローディングのDOMを追加しました。
 
-```
+```html
 <img src='./img/loading.gif' alt='loading' id='isLoading-kadai7'>
 ```
 
@@ -235,7 +235,7 @@ HTMLにローディングのDOMを追加しました。
 
 今後の課題もローディングがでてくるのですが、この命名規則に準拠しています。。
 
-```
+```js
 const $loading = document.getElementById( 'isLoading-kadai7' );
 
 ===
@@ -278,7 +278,7 @@ JS側では、先にローディングのidを捕捉しておいて、Promiseの
 
 - HTML
 
-```
+```html
 <div class='kadai-8'>
     <p>課題8</p>
     <div class='kadai-8-wrapper'>
@@ -290,7 +290,7 @@ JS側では、先にローディングのidを捕捉しておいて、Promiseの
 
 - JS
 
-```
+```js
 const kadai8 = function() {
     const $ = document.getElementById( 'kadai8Ul' );
     const $loading = document.getElementById( 'isLoading-kadai8' );

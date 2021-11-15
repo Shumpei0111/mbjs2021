@@ -10,7 +10,9 @@ tags: [プログラミング学習]
 不安に思ったエンジニア1年生の僕がこんなツイートをしたら思った以上に反応いただけたので、
 ブログにまとめておこうと思いました。
 
-{% twitter https://twitter.com/seventhseven/status/1149117945068449792 %}
+```twitter
+https://twitter.com/seventhseven/status/1149117945068449792
+```
 
 
 以下、教えていただいた方たちのツイートをご紹介します。
@@ -18,7 +20,9 @@ tags: [プログラミング学習]
 
 ## きっかわさん
 
-{% twitter https://twitter.com/kikkawapapa/status/1149124726939193344 %}
+```twitter
+https://twitter.com/kikkawapapa/status/1149124726939193344
+```
 
 いつもお世話になっているきっかわさん。
 家族第一で家事もお仕事もバリバリされている憧れのエンジニアさんです。
@@ -28,7 +32,9 @@ tags: [プログラミング学習]
 
 ## えぐちさん
 
-{% twitter https://twitter.com/egu777/status/1149119447786913793 %}
+```twitter
+https://twitter.com/egu777/status/1149119447786913793
+```
 
 ベテランエンジニアのえぐちさん。
 やはり一緒に寝てしまうだろうなぁと思うこちらのツイート。
@@ -38,7 +44,9 @@ tags: [プログラミング学習]
 
 ## isa_minさん
 
-{% twitter https://twitter.com/isa_min_/status/1149120146968961024 %}
+```twitter
+https://twitter.com/isa_min_/status/1149120146968961024
+```
 
 日本に来られて10年になるisa_minさん。
 エンジニアになられたのは39歳からとのことで、最近Webエンジニアになられたようです。
@@ -49,7 +57,9 @@ isa_minさんもお子さんを寝かしつけてからされているスタイ�
 
 ## なかちゃんさん
 
-{% twitter https://twitter.com/nakasin52/status/1149265661907963904 %}
+```twitter
+https://twitter.com/nakasin52/status/1149265661907963904
+```
 
 長野でフリーランスエンジニアのなかちゃんさん。
 
@@ -59,7 +69,9 @@ isa_minさんもお子さんを寝かしつけてからされているスタイ�
 
 ## さくらさん
 
-{% twitter https://twitter.com/sakura_engineer/status/1149274190219902976 %}
+```twitter
+https://twitter.com/sakura_engineer/status/1149274190219902976
+```
 
 3人のお子さんを育てるシングルマザーのさくらさん。
 フロントエンドでバリバリやられてるフリーランスママさんです。
@@ -72,7 +84,9 @@ isa_minさんもお子さんを寝かしつけてからされているスタイ�
 
 ## Suzakingさん
 
-{% twitter https://twitter.com/szaking/status/1149163479661551616 %}
+```twitter
+https://twitter.com/szaking/status/1149163479661551616
+```
 
 Suzakingさんもフロントエンドの方で、1歳になったばかりのお子さんをお持ちのエンジニアさんです。
 やはり通勤時間がキモになってくるように思います。
@@ -82,7 +96,9 @@ Suzakingさんもフロントエンドの方で、1歳になったばかりの�
 
 ## TAKASHIさん
 
-{% twitter https://twitter.com/cloverkizuna/status/1149284619008667648 %}
+```twitter
+https://twitter.com/cloverkizuna/status/1149284619008667648
+```
 
 個人開発者のTAKASHIさん。
 働きながら子育てもして、さらに個人開発もやるという、自分が今一番目指してるようなスタイルです。
@@ -101,7 +117,9 @@ Suzakingさんもフロントエンドの方で、1歳になったばかりの�
 
 ## りらぞうさん
 
-{% twitter https://twitter.com/rirazou_/status/1149289587493101569 %}
+```twitter
+https://twitter.com/rirazou_/status/1149289587493101569
+```
 
 色々な言語を使いこなす1歳半のお子さんをお持ちのエンジニアのりらぞうさん。
 りらぞうさんも通勤時間は勉強にあてていらっしゃるとのことで、

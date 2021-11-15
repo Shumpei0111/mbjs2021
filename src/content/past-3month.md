@@ -106,7 +106,7 @@ PUGはHTMLを楽に書けるようにしてくれるもので、
 
 sassも変数など使えるので、`variable.scss`という使う変数だけをまとめたファイルに繰り返し使う変数を登録しておくことが可能です。
 
-```
+```css
 # 例
 # variable.scss
 $font-size: 16px;

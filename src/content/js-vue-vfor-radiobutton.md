@@ -20,7 +20,7 @@ tags: [javascript, Vue.js]
 具体的にはこんな感じです。
 
 ## Vue側
-```
+```js
 data: {
   choosed: ""
   list: [
@@ -31,7 +31,7 @@ data: {
 ```
 
 ## テンプレート側
-```
+```html
 <ul>
   <li v-for="item in list" :key='item.id'>
     <input type="radio" name="sample" 

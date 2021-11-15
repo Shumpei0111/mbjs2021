@@ -51,7 +51,7 @@ $ npx gulp -v
 ※requireで書かれた部分はgulpのプラグインになりますので、
 別途インストールが必要です。
 
-```
+```js
 // gulpプラグインの読み込み
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
