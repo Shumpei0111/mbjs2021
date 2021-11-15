@@ -1,0 +1,23 @@
+@use './variables.module' as v;
+
+#scrollBar {
+    
+}
+
+.scrollBar {
+    width: 4px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 6;
+
+    &__bar {
+        position: absolute;
+        top: 0;
+        right: 0%;
+        background-color: v.$c-primary;
+        width: 100%;
+        height: 0;
+    }
+}
