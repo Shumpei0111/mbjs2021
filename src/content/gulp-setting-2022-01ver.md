@@ -4,9 +4,9 @@ date: 2022-01-20 22:14:00
 tags: [javascript, gulp]
 ---
 
-<!--toc -->
+<!-- toc -->
 
-<a href="https://www.mb-js.tokyo/tags/gulp/" target="_blank">今までのGulpシリーズはこちら</a>
+[今までのGulpシリーズはこちら](https://www.mb-js.tokyo/tags/gulp/)
 
 ## 前提
 
