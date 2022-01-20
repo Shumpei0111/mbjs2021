@@ -4,8 +4,6 @@ date: 2022-01-20 22:14:00
 tags: [javascript, gulp]
 ---
 
-<!-- toc -->
-
 [今までのGulpシリーズはこちら](https://www.mb-js.tokyo/tags/gulp/)
 
 ## 前提
