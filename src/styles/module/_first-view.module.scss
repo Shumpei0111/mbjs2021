@@ -6,11 +6,11 @@
     width: 100%;
     max-width: v.$max-width;
     min-width: v.$min-width;
-    margin: auto;
+    margin: v.$headerHeight auto 0;
 
     &__arm {
         position: absolute;
-        top: -30%;
+        top: -38%;
         left: 120px;
     }
 

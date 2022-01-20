@@ -32,7 +32,7 @@ const Header = () => {
 
 
     return (
-        <>
+        <div className={style.header}>
             <header className={style.headerContainer}>
                 <Link href='/'>
                         <a className={style.headerLogo}>      
@@ -66,7 +66,7 @@ const Header = () => {
                     isContact ? <><span className={style.breadcrumbs__slash}>&#047;</span><Link href='/contact'><a className={style.breadcrumbs__item}>CONTACT</a></Link></> : <></>
                 }
             </div>
-        </>
+        </div>
     )
 };
 

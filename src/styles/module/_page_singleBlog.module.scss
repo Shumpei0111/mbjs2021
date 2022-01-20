@@ -1,19 +1,41 @@
 @use './variables.module' as v;
 
 .singleBlog {
-    max-width: 900px;
+    max-width: 768px;
     margin: 0 auto 80px;
+    padding: 48px;
+    background: rgba($color: #fff, $alpha: .95);
+    color: #272727;
+
+    a {
+        color: #272727;
+        text-decoration: underline;
+    }
+
+    &__tags {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__tag {
+        list-style-type: none;
+        padding-right: 24px;
+    }
+
 
     &__title {
         font-size: 2rem;
+        font-weight: bold;
         padding: 16px 24px 16px 0;
         border-bottom: 1px solid;
         margin: 40px 0;
+        line-height: 1.5 !important;
     }
 
     &__date {
-        padding-left: 24px;
         font-size: 1.4rem;
+        font-weight: 400;
+        padding-left: 24px;
         display: block;
     }
 
@@ -48,6 +70,7 @@
         margin: 24px 0 32px;
         font-size: 3rem;
         font-weight: bold;
+        line-height: 1.2;
     }
 
     h2 {
@@ -55,8 +78,10 @@
         transform: initial;
         color: inherit;
         font-size: 1.6rem;
-        margin: 18px 0 26px;
+        padding-bottom: 8px;
+        margin: 38px 0 24px;
         opacity: 1;
+        border-bottom: 1px solid;
     }
 
     h3 {
@@ -66,7 +91,7 @@
     }
 
     p {
-        line-height: 2;
+        line-height: 2.5;
     }
 
     hr {
