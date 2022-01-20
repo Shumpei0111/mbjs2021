@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -6,11 +7,43 @@ import SeeWebSite from './SeeWebSite.js';
 import * as style from '../styles/module/_projects.module.scss';
 
 const Projects = () => {
+    // ref: https://stackoverflow.com/questions/44205000/how-to-add-class-in-element-on-scroll-react-js
+
+    const [isEnter, setIsEnter] = useState( false );
+
+    useEffect( () => {
+        const handleScroll = () => {
+            let flg = false;
+            if( !flg && window.scrollY > 700 ) {
+                setIsEnter(true);
+                flg = true;
+            }
+        }
+        window.addEventListener( 'scroll', handleScroll );
+        return () => window.removeEventListener( 'scroll', handleScroll );
+    }, [] );
+
     return (
         <div className={style.projects}>
             <h2 className={style.projects__h2}>PROJECTS</h2>
             <div className={style.projects__mainContents}>
-                <h3 className={style.projects__h3}>Recent Projects</h3>
+                <h3 className={`${style.projects__h3} ${isEnter ? style.visible : ''}`}>
+                    <span>R</span>
+                    <span>e</span>
+                    <span>c</span>
+                    <span>e</span>
+                    <span>n</span>
+                    <span>t</span>
+                    <span>&thinsp;</span>
+                    <span>P</span>
+                    <span>r</span>
+                    <span>o</span>
+                    <span>j</span>
+                    <span>e</span>
+                    <span>c</span>
+                    <span>t</span>
+                    <span>s</span>
+                </h3>
 
                 <div className={`${style.projects__genreContainer}`}>
                     <p className={`${style.projects__bgTitle} ${style.projects__bgTitleMarquee}`} data-title='APP&SITE'>APP&SITE</p>

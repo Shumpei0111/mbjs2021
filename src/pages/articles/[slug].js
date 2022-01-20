@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import matter from "gray-matter";
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from "../../components/CodeBlock";
@@ -9,6 +11,12 @@ import gfm from 'remark-gfm';
 import * as style from '../../styles/module/_page_singleBlog.module.scss';
 
 const SingleBlog = (props) => {
+    const pageTitle = props.frontmatter.title;
+    const tags = ( () => {
+        if( Array.isArray(props.frontmatter.tags) ) return props.frontmatter.tags;
+        return [props.frontmatter.tags];
+    } )();
+
     const H1 = ({ node, ...props }) => {
         return (
             <h1 id={node.position?.start.line.toString()}>{props.children}</h1>
@@ -30,7 +38,17 @@ const SingleBlog = (props) => {
 
     return (
         <Layout>
+            <Head>
+                <title>{`${pageTitle} | MB.js`}</title>
+            </Head>
             <div className={style.singleBlog}>
+                <ul className={style.singleBlog__tags}>
+                    {tags.map((tag,i) => {
+                        return(
+                            <li className={style.singleBlog__tag} key={i}>#{tag}</li>
+                        )
+                    })}
+                </ul>
                 <p className={style.singleBlog__title}>
                     {props.frontmatter.title}
                     <span className={style.singleBlog__date}>posted at: {arrangeDate(props.frontmatter.date)}</span>
@@ -89,8 +107,11 @@ export async function getStaticProps(context) {
     const data = await import(`../../content/${slug}.md`);
     const singleDocument = matter(data.default);
 
+    const title = singleDocument.data.title
+
     return {
         props: {
+            title: title,
             frontmatter: JSON.parse(JSON.stringify(singleDocument.data)),
             markdownBody: singleDocument.content,
         }

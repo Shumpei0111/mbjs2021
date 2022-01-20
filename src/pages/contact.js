@@ -22,7 +22,7 @@ const Contact = () => {
                 <Link href={mailTo}><a className={style.contact__mail} target='_blank' rel='noopener'>shumpei<span className={style.contact__dot}></span>o<span className={style.contact__dot}></span>7g<span className={style.contact__atmark}></span>gmail<span className={style.contact__dot}></span>com</a></Link>
 
                 <div className={style.contact__sns}>
-                    <p>You can also follow me.</p>
+                    <p>You can also follow me.✋</p>
                     <ul>
                         <li><Link href='https://twitter.com/seventhseven'><a target='_blank' rel='noopener'><FontAwesomeIcon icon={faTwitter} /> / @seventhseven</a></Link></li>
                         <li><Link href='https://github.com/Shumpei0111'><a target='_blank' rel='noopener'><FontAwesomeIcon icon={faGithub} /> / Shumpei0111</a></Link></li>
