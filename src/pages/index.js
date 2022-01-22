@@ -3,7 +3,6 @@ import FirstView from '../components/FirstView.js';
 import Projects from '../components/Projects.js';
 import TopMarquee from '../components/TopMarquee.js';
 
-
 const Index = () => {
 	return(
 		<Layout>

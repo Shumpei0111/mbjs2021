@@ -10,7 +10,7 @@
 
     &__arm {
         position: absolute;
-        top: -38%;
+        top: -300px;
         left: 120px;
     }
 
@@ -177,4 +177,42 @@
         transform: translate3d(-50%, 71px, 0);
         height: 0px;
     }
+}
+
+
+@media screen and (max-width:v.$mq) {
+    .firstView {
+        margin-top: 0;
+
+        &__arm {
+            top: -280px;
+            left: 50px;
+        }
+
+        &__role {
+            margin-left: 24px;
+            margin-top: 80px;
+
+            .role__name {
+                font-size: 3.6rem;
+            }
+
+            &__doujin {
+                padding-top: 8px;
+
+                ul {
+                    li {
+                        display: inline-block;
+                        font-size: 1.8rem;
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+
+        .scrollDownBoxContainer {
+            // top: calc(100vh - (150px + 40%));
+            display: none;
+        }
+    } // firstView
 }

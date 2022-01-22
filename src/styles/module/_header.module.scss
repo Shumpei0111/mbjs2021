@@ -118,3 +118,23 @@ $headerMaxWidth: 1216px;
         display: none;
     }
 }
+
+
+@media screen and (max-width:v.$mq) {
+    $height: 100px;
+    .header {
+        max-width: v.$mq;
+        padding: 0 42px 0 0;
+        height: $height;
+        width: 100%;
+    }
+
+    .headerContainer {
+        border-left: none;
+        height: $height;
+    }
+    .headerLogo {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+}
