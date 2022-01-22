@@ -255,3 +255,69 @@
         transform:  translate3d( calc((-100% / 3) - 0.125em), 0, 0 );
     }
 }
+
+
+@media screen and (max-width:v.$mq) {
+    .projects {
+        margin-top: 0;
+
+        &__mainContents {
+            .projects__h3 {
+                font-size: 5rem;
+                margin-bottom: 0;
+            }
+        }
+
+        &__mainContents {
+            .projects__genreContainer {
+                padding: 0 24px;
+
+                .projects__captionWrapper {
+                    grid-template-columns: 1fr;
+                    margin-bottom: 120px;
+                }
+                
+                .projects__pjCaption {
+                    margin-bottom: 20px;
+                }
+
+                .projects__pj__stack {
+                    padding-top: 32px;
+                    border-left: none;
+                    font-size: 1.2rem;
+                }
+
+                .projects__date {
+                    display: block;
+                    position: relative;
+                    margin: 0;
+                    text-align: right;
+                    transform: rotate(0);
+                }
+
+                .projects__circle {
+                    &__distribution {
+                        grid-template-columns: 1fr;
+                    }
+
+                    &__hanpuWrapper {
+                        margin: 0;
+                    }
+
+                    &__distribution {
+                        height: auto;
+                        padding-bottom: 120px;
+
+                        ul {
+                            border-left: none;
+                        }
+
+                        .projects__overviewWrapper {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

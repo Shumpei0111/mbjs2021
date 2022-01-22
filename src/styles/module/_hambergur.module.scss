@@ -67,7 +67,10 @@
     .currentOpenPage {
 
         a {
-            text-decoration: line-through 10px solid v.$c-primary;
+            text-decoration-line: line-through;
+            text-decoration-thickness: 10px;
+            text-decoration-style: solid;
+            text-decoration-color: v.$c-primary;
         }
     }
 
@@ -127,5 +130,14 @@
 
     .burgerMenu__siteTitle {
         opacity: 0;
+    }
+}
+
+
+@media screen and (max-width:v.$mq) {
+    .burgerIsOpen {
+        .burgerMenuItem {
+            font-size: 9rem;
+        }
     }
 }

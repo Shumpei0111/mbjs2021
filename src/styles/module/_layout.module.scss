@@ -8,3 +8,10 @@
     padding-bottom: v.$footerContainerHeight;
     margin: 0 32px;
 }
+
+
+@media screen and (max-width:v.$mq) {
+    .mainContainer {
+        margin: 0 24px;
+    }
+}

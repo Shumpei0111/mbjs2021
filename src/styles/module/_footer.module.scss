@@ -47,7 +47,10 @@ $addressHeight: 82px;
             }
 
             &.currPage {
-                text-decoration: line-through 4px solid v.$c-primary;
+                text-decoration-line: line-through;
+                text-decoration-thickness: 4px;
+                text-decoration-style: solid;
+                text-decoration-color: v.$c-primary;
             }
 
             @for $i from 1 through 3 {
@@ -72,5 +75,15 @@ $addressHeight: 82px;
         height: $addressHeight;
         text-align: center;
         font: inherit;
+    }
+}
+
+
+@media screen and (max-width:v.$mq) {
+    .footerContainer {
+
+        .footerLinks {
+            flex-direction: column;
+        }
     }
 }

@@ -19,6 +19,8 @@ const Hamburger = (props) => {
     const isAbout = pathname.match(/^about/);
     const isContact = pathname.match(/^contact/);
 
+    const handleHomeClick = () => { location.href="/"; }
+
     return (
         <nav id='hamburger' className={`${style.burgerMenu}`}>
             <div className={
@@ -51,7 +53,7 @@ const Hamburger = (props) => {
                             </Link>
                         </li>
                         <li>
-                            <Link href='/'><a className={style.burger__homeLink}><span>HOME</span></a></Link>
+                            <span onClick={handleHomeClick}><a className={style.burger__homeLink}><span>HOME</span></a></span>
                         </li>
                     </ul>
                 </div>
