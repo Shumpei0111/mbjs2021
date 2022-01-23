@@ -128,6 +128,14 @@
         .aboutVisual {
             flex-direction: column-reverse;
 
+            .profile__img {
+                -webkit-filter: grayscale(0%);
+                -moz-filter: grayscale(0%);
+                -ms-filter: grayscale(0%);
+                -o-filter: grayscale(0%);
+                filter: grayscale(0%);
+            }
+
             .names {
                 margin: 32px auto;
     
