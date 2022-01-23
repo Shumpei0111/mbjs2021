@@ -120,3 +120,51 @@
 
     
 }
+
+@media screen and (max-width:v.$mq) {
+    .aboutContainer {
+        padding: 0 24px;
+
+        .aboutVisual {
+            flex-direction: column-reverse;
+
+            .names {
+                margin: 32px auto;
+    
+                .profile__baseIn {
+                    text-align: left;
+                }
+
+                .profile__iam {
+                    text-align: left;
+                }
+
+                .profle__snsList {
+                    li {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        .profile__head {
+            width: 100%;
+        }
+
+        .profile__motto {
+            flex-direction: column;
+
+            &__detail {
+                width: 100%;
+            }
+        }
+
+        .profile__detail {
+            flex-direction: column;
+
+            .profile__detail__wrapper {
+                width: 100%;
+            }
+        }
+    } // .aboutContainer
+}
