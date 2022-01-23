@@ -137,4 +137,12 @@ $headerMaxWidth: 1216px;
         margin-top: 40px;
         margin-left: 0;
     }
+
+    .burgerContainer {
+        .burger {
+            &__bar {
+                width: 68px;
+            }
+        }
+    }
 }

@@ -53,3 +53,14 @@
         }
     }
 }
+
+
+@media screen and (max-width:v.$mq) {
+    .articleContainer {
+        padding: 0 24px;
+
+        .articleWrapper {
+            padding-left: 0;
+        }
+    }
+}
