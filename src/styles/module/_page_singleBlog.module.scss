@@ -140,4 +140,41 @@
             list-style-type: disc;
         }
     }
+
+    pre {
+        border-radius: 3px;
+    }
+
+    p {
+        code {
+            background: rgb(43, 43, 43);
+            color: v.$c-white;
+            padding: 2px 8px;
+            border-radius: 3px;
+        }
+    }
+}
+
+
+@media screen and (max-width:v.$mq) {
+    .singleBlog {
+        padding: 48px 24px;
+
+        &__toc {
+            margin-left: 20px;
+            margin-right: 0;
+
+            a {
+                line-height: 1.4;
+            }
+        }
+
+        ul {
+            margin-left: 16px;
+
+            li {
+                line-height: 1.8;
+            }
+        }
+    }
 }

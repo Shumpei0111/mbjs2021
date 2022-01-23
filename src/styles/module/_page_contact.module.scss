@@ -54,3 +54,9 @@
         }
     }
 }
+
+@media screen and (max-width:v.$mq) {
+    .contactContainer {
+        padding: 0 24px;
+    }
+}
