@@ -19,7 +19,8 @@ const Hamburger = (props) => {
     const isAbout = pathname.match(/^about/);
     const isContact = pathname.match(/^contact/);
 
-    const handleHomeClick = () => { location.href="/"; }
+    console.log(props);
+    const handlClick = () => { props.toggleModal() }
 
     return (
         <nav id='hamburger' className={`${style.burgerMenu}`}>
@@ -27,7 +28,7 @@ const Hamburger = (props) => {
                 `${style.burgerMenuContainer} ${isOpen ? style.burgerIsOpen: style.burgerIsHidden} ${isOpen && blogHover ? style.burgerMenu__blogHover : '' } ${isOpen && aboutHover ? style.burgerMenu__aboutHover : '' } ${isOpen && contactHover ? style.burgerMenu__contactHover : '' }`}>
                 <div className={style.burgerMenu__items}>
                     <ul>
-                        <li className={`${style.burgerMenuItem} ${isBlog ? style.currentOpenPage : ''}`
+                        <li onClick={handlClick} className={`${style.burgerMenuItem} ${isBlog ? style.currentOpenPage : ''}`
                         }>
                             <Link href='/archives/1'>
                                 <a 
@@ -36,7 +37,7 @@ const Hamburger = (props) => {
                             </Link>
                         </li>
 
-                        <li className={`${style.burgerMenuItem} ${isAbout ? style.currentOpenPage : ''}`
+                        <li onClick={handlClick} className={`${style.burgerMenuItem} ${isAbout ? style.currentOpenPage : ''}`
                         }>
                             <Link href='/about'>
                                 <a 
@@ -45,7 +46,7 @@ const Hamburger = (props) => {
                             </Link>
                         </li>
 
-                        <li className={`${style.burgerMenuItem} ${isContact ? style.currentOpenPage : ''}`}>
+                        <li onClick={handlClick} className={`${style.burgerMenuItem} ${isContact ? style.currentOpenPage : ''}`}>
                             <Link href='/contact'>
                                 <a
                                 onMouseEnter={toggleContactHover}
@@ -53,7 +54,11 @@ const Hamburger = (props) => {
                             </Link>
                         </li>
                         <li>
-                            <span onClick={handleHomeClick}><a className={style.burger__homeLink}><span>HOME</span></a></span>
+                            <span onClick={handlClick}>
+                                <Link href="/">
+                                    <a className={style.burger__homeLink}><span>HOME</span></a>
+                                </Link>
+                            </span>
                         </li>
                     </ul>
                 </div>

@@ -50,7 +50,7 @@ const Header = () => {
                         <span className={style.burger__str}>MENU</span>
                     </div>
                 </button>
-                <Hamburger isOpen={open} pathname={pathname} />
+                <Hamburger isOpen={open} toggleModal={toggleModal} pathname={pathname} />
             </header>
             <div className={`${style.breadcrumbs} ${isHome ? style.breadcrumbs__notShow : ''}`}>
                 {

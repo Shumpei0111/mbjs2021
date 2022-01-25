@@ -1,12 +1,15 @@
 import CommonHead from '../components/head/CommonHead';
+import { AnimatePresence } from 'framer-motion';
 
 import '../styles/base.scss';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
 	return (
 		<>
 			<CommonHead />
-			<Component {...pageProps} />
+			<AnimatePresence exitBeforeEnter>
+				<Component {...pageProps} key={router.route} />
+			</AnimatePresence>
 		</>
 	)
 }

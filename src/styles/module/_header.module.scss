@@ -15,7 +15,7 @@ $headerMaxWidth: 1216px;
 .headerContainer {
     position: relative;
     height: v.$headerHeight;
-    border-left: 1px solid;
+    // border-left: 1px solid;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,7 @@ $headerMaxWidth: 1216px;
     display: inline-block;
     font-size: 4.1rem;
     margin-top: 103px;
-    margin-left: 24px;
+    // margin-left: 24px;
     width: 150px;
 
     &__subtitle {

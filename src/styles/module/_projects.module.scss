@@ -131,13 +131,14 @@
             .projects__name {
                 font-size: 2.4rem;
                 margin-bottom: 16px;
+                margin-left: 24px;
             }
 
             .projects__num:before {
                 content: '';
                 font-size: 1.6rem;
                 position: absolute;
-                left: -20px;
+                left: 0;
             }
 
             .projects__num1:before {
@@ -155,6 +156,7 @@
             .projects__item {
                 position: relative;
                 margin: 0 auto 32px;
+                max-width: 1190px;
             }
 
             .projects__captionWrapper {
