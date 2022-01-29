@@ -41,6 +41,9 @@ export const useTransitionFix = () => {
 
     // Return an fixed reference function that calls the internal cleanup reference.
     return useCallback(() => {
-        cleanupRef.current()
+        cleanupRef.current();
+        if (typeof window !== 'undefined') {
+            window.scrollTo({ top: 0 })
+        }
     }, [])
 }

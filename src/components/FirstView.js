@@ -2,14 +2,22 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import * as style from '../styles/module/_first-view.module.scss';
 import * as fadein from '../styles/module/_fadein.module.scss';
+import { motion } from 'framer-motion';
 
 const FirstView = () => {
     const [ fadeIn, setFadeIn ] = useState( false );
     const [ imgFadeIn, setImgFadeIn ] = useState( false );
 
+    const toTopPosition = () => {
+        if (typeof window !== 'undefined') {
+            window.scrollTo({ top: 0 })
+        }
+    };
+
     useEffect(() => {
         setTimeout(() => {
             setImgFadeIn( true );
+            toTopPosition();
         }, 100);
     },[])
     
@@ -19,17 +27,16 @@ const FirstView = () => {
         }, 600);
     }, []);
 
-
-
     return (
         <div className={style.firstView}>
             <div className={`${style.firstView__arm} ${fadein.animation} ${imgFadeIn ? fadein.active: ''}`}>
-                <Image
-                    src='/images/arm_and_sign.png'
-                    alt='arm'
-                    width={2040/4}
-                    height={3680/4}
-                />
+                    <Image
+                        src='/images/arm_and_sign.png'
+                        alt='arm'
+                        width={2040/4}
+                        height={3680/4}
+                    />
+                
             </div>
             <div className={`${style.firstView__container} ${fadein.animation} ${fadeIn ? fadein.active: ''}`}>
                 <div className={style.firstView__role}>
