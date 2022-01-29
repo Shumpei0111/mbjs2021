@@ -12,13 +12,18 @@ const transition = {
 	ease: [0.43, 0.13, 0.23, 0.96]
 };
 
-const backVariants = {
-	exit: { x: 60, opacity: 0, transition },
-	enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } }
+const imageVariants = {
+    // exit: { y: '50%', opacity: 0, transition },
+    exit: { opacity: 0, transition },
+    enter: {
+        y: '0%',
+        opacity: 1,
+        transition,
+        },
 };
 
+
 const Layout = (props) => {
-    
     return (
         <div id='mainContainer' className={layoutStyle.mainContainer}>
             <ScrollBar />
@@ -29,7 +34,7 @@ const Layout = (props) => {
 				exit="exit"
 			>
                 <Header />
-                <motion.div variants={backVariants}>
+                <motion.div variants={imageVariants}>
                     <main>{props.children}</main>
                 </motion.div>
                 <Footer />
