@@ -1,0 +1,35 @@
+@use './variables.module' as v;
+
+.notFoundContainer {
+    height: 30vh;
+    margin: auto;
+    width: 50%;
+    
+    p {
+        text-align: center;
+        padding-bottom: 8px;
+    }
+}
+
+.anotherContents {
+    margin: 24px auto;
+    text-align: center;
+
+    &__item {
+        display: inline-block;
+        font-size: 4rem;
+        
+        a {
+            padding: 8px 24px;
+            border: 1px solid;
+            border-radius: 4px;
+            transition: all .2s ease-in;
+
+            &:hover {
+                background-color: v.$c-primary;
+                color: v.$c-black;
+            }
+
+        }
+    }
+}
