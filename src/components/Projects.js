@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import GoogleExtension from './GoogleExtension.js';
 import SeeWebSite from './SeeWebSite.js';
 
 import * as style from '../styles/module/_projects.module.scss';
@@ -263,6 +264,8 @@ const Projects = () => {
                         </ul>
                     </div>
                 </div>
+
+                <GoogleExtension />
             </div>
             <p className={style.projects__ceparate}>*</p>
         </div>
