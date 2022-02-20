@@ -41,8 +41,9 @@ $headerMaxWidth: 1216px;
 
 .burgerContainer {
     position: absolute;
-    right: 0;
+    right: 20px;
     bottom: 0;
+    margin-right: 22px;
     z-index: 100;
 
     .burger {
