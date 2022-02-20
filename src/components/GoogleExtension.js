@@ -15,7 +15,7 @@ const GoogleExtension = () => {
                     <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num1}`}>シンプル文字数カウンター</p>
                     <div className={style.projects__item}>
                         <Link href='https://github.com/Shumpei0111/simple_word_count'>
-                            <a ref='noopener' target='_blank'>
+                            <a rel='noopener' target='_blank'>
                                 <Image
                                     src='/images/simple_counter.png'
                                     alt='My Chrome Extension, simple counter screen shot'
