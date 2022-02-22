@@ -109,6 +109,12 @@ const SingleBlog = (props) => {
                         <TwitterIcon size={30} round={true} />
                     </TwitterShareButton>
                 </div>
+
+                <div className={style.singleBlog__backToList}>
+                    <Link href="/archives/1">
+                        <a className={style.singleBlog__back}>一覧に戻る</a>
+                    </Link>
+                </div>
             </div>
         </Layout>
     )

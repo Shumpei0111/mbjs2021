@@ -10,6 +10,10 @@ const Footer = () => {
     const isAbout = pathname.match(/^about/);
     const isContact = pathname.match(/^contact/);
 
+    const now = new Date();
+    const year = now.getFullYear();
+    const COPY_RIGHT = `MB.js | copyright ${year} Shumpei All Rights Reserved.`;
+
     return (
         <footer className={style.footerContainer}>
             <div className={style.footerTopBorder} />
@@ -24,7 +28,7 @@ const Footer = () => {
                     <Link href='/contact'><a>Contact</a></Link>
                 </li>
             </ul>
-            <address translate='no' className={style.footer__address}>MB.js | copyright 2021 Shumpei All Rights Reserved.</address>
+            <address translate='no' className={style.footer__address}>{COPY_RIGHT}</address>
         </footer>
     )
 };
