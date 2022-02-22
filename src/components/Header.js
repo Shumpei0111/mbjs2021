@@ -21,14 +21,14 @@ const Header = () => {
         else setOpen( false );
     }
 
-    useEffect(() => {
-        if( open ) {
-            document.documentElement.style.overflowY = 'hidden';
-        } else {
-            document.documentElement.style.overflowY = '';
+    // useEffect(() => {
+    //     if( open ) {
+    //         document.documentElement.style.overflowY = 'hidden';
+    //     } else {
+    //         document.documentElement.style.overflowY = '';
 
-        }
-    }, [open])
+    //     }
+    // }, [open])
 
 
     return (
