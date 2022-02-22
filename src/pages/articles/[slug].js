@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import matter from "gray-matter";
 import ReactMarkdown from 'react-markdown';
@@ -7,6 +9,7 @@ import Layout from "../../components/Layout";
 import arrangeDate from "../../lib/arrange-date";
 
 import gfm from 'remark-gfm';
+import { TwitterShareButton, TwitterIcon } from 'react-share';
 
 import * as style from '../../styles/module/_page_singleBlog.module.scss';
 
@@ -35,6 +38,9 @@ const SingleBlog = (props) => {
         );
     }
 
+    const router = useRouter();
+    const shareURL = `https://www.mb-js.site${router.asPath}`;
+
 
     return (
         <Layout>
@@ -49,10 +55,24 @@ const SingleBlog = (props) => {
                         )
                     })}
                 </ul>
-                <p className={style.singleBlog__title}>
-                    {props.frontmatter.title}
-                    <span className={style.singleBlog__date}>posted at: {arrangeDate(props.frontmatter.date)}</span>
-                </p>
+                <div className={style.singleBlog__title}>
+                    <p>{props.frontmatter.title}</p>
+                    <div className={style.singleBlog__meta}>
+                        <TwitterShareButton
+                            url={shareURL}
+                            title={pageTitle}
+                            via="seventhseven"
+                            related={["seventhseven"]}
+                        >
+                            <TwitterIcon size={20} round={true} />
+                        </TwitterShareButton>
+                        <Link href="https://twitter.com/seventhseven">
+                            <a className={style.singleBlog__author}  target="_blank" rel="noopener nofollow noreferrer">@seventhseven</a>
+                        </Link>
+                        <span className={style.singleBlog__date}>posted at: {arrangeDate(props.frontmatter.date)}</span>
+                    </div>
+                </div> 
+
 
                 {/** 目次 */}
                 <div className={style.singleBlog__toc}>
@@ -75,6 +95,20 @@ const SingleBlog = (props) => {
                 >
                     {props.markdownBody}
                 </ReactMarkdown>
+
+                <p className={style.singleBlog__separater}>*</p>
+
+                <div className={style.singleBlog__shareContainer}>
+                    <p>この記事が「役に立つ」「面白い」と思ったら、下記のボタンから Twitter でのシェアをお願いします！</p>
+                    <TwitterShareButton
+                        url={shareURL}
+                        title={pageTitle}
+                        via="seventhseven"
+                        related={["seventhseven"]}
+                    >
+                        <TwitterIcon size={30} round={true} />
+                    </TwitterShareButton>
+                </div>
             </div>
         </Layout>
     )
