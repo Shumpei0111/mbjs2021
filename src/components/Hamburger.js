@@ -19,7 +19,6 @@ const Hamburger = (props) => {
     const isAbout = pathname.match(/^about/);
     const isContact = pathname.match(/^contact/);
 
-    console.log(props);
     const handlClick = () => { props.toggleModal() }
 
     return (
