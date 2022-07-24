@@ -153,10 +153,18 @@
                 content: '03';
             }
 
+            .projects__num4:before {
+                content: '04';
+            }
+
             .projects__item {
                 position: relative;
                 margin: 0 auto 32px;
                 max-width: 1190px;
+            }
+
+            .projects__marginTopAdd {
+                margin-top: 24px;
             }
 
             .projects__captionWrapper {
@@ -204,7 +212,8 @@
                 }
             }
 
-            .projects__circleTop {
+            .projects__circleTop,
+            .projects__presentTop {
                 margin-bottom: 64px;
             }
 
