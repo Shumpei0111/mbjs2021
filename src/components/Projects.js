@@ -50,7 +50,36 @@ const Projects = () => {
                     <p className={`${style.projects__bgTitle} ${style.projects__bgTitleMarquee}`} data-title='APP&SITE'>APP&SITE</p>
                     <ul className={style.projects__list}>
                         <li>
-                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num1}`}>廃校探索</p>
+                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num1}`}>百合に酔う。「上伊那ぼたん、酔へる姿は百合の花」ファンサイト</p>
+                            <div className={style.projects__item}>
+                                <Link href='https://yuriyoi.site/'>
+                                    <a rel='noopener' target='_blank'>
+                                        <Image
+                                            src='/images/kamiinabotan-site.png'
+                                            alt='百合に酔う。「上伊那ぼたん、酔へる姿は百合の花」ファンサイトのスクリーンショット'
+                                            width={1200}
+                                            height={592} />
+                                    </a>
+                                </Link>
+                                <span className={style.projects__date}>2022.04.17</span>
+                            </div>
+                            <div className={style.projects__captionWrapper}>
+                                <div className={style.projects__overviewWrapper}>
+                                    <h4>概要</h4>
+                                    <p className={style.projects__pjCaption}>秋田書店マンガクロスで現在連載中の「上伊那ぼたん、酔へる姿は百合の花」を応援するために作成したファンサイト。</p>
+                                    <SeeWebSite url='https://yuriyoi.site/' />
+                                </div>
+                                <ul className={style.projects__pj__stack}>
+                                    <li>フロントエンド：React（Next.js）</li>
+                                    <li>インフラ：Vercel</li>
+                                    <li>制作期間：1ヶ月半</li>
+                                    <li>企画、デザイン、ライティング、実装</li>
+                                    {/* <li><Link href="https://github.com/Shumpei0111/obake-lp"><a target="_blank" rel="noopener">GitHub</a></Link></li> */}
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num2}`}>廃校探索</p>
                             <div className={style.projects__item}>
                                 <Link href='https://hoshikake-obake.site/'>
                                     <a rel='noopener' target='_blank'>
@@ -79,7 +108,7 @@ const Projects = () => {
                             </div>
                         </li>
                         <li>
-                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num2}`}>PRESENT RESORT POINT</p>
+                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num3}`}>PRESENT RESORT POINT</p>
                             <div className={style.projects__item}>
                                 <Link href='https://present-resort-point.tokyo/' >
                                     <a rel='noopener' target='_blank'>
@@ -108,7 +137,7 @@ const Projects = () => {
                             </div>
                         </li>
                         <li>
-                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num3}`}>VILLAINS HOMME</p>
+                            <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num4}`}>VILLAINS HOMME</p>
                             <div className={style.projects__item}>
                                 <Link href='https://villains-homme.web.app/'>
                                     <a rel='noopener' target='_blank'>
@@ -138,6 +167,55 @@ const Projects = () => {
                             </div>
                         </li>
                     </ul>
+                </div>
+
+                <p className={style.projects__ceparate}>*</p>
+
+                <div className={`${style.projects__genreContainer}`}>
+                    <p className={style.projects__genreTitle}>発表&nbsp;|&nbsp;PRESENT</p>
+                    <p className={`${style.projects__bgTitle} ${style.projects__bgTitleMarquee}`} data-title='PRESENT'>PRESENT</p>
+                    <div className={style.projects__presentTop}>
+                        <p className={style.projects__pjCaption}>複数のオンラインコミュニティでLT（20分）をしたり、レクチャーをする機会がありました。</p>
+                        <p className={style.projects__pjCaption}>その際、セキュリティについてのレクチャーはWebサイト化しているので掲載します。</p>
+                    </div>
+                    <div>
+                        <ul className={style.projects__list}>
+                            <li>
+                                <p className={`${style.projects__name} ${style.projects__num} ${style.projects__num1}`}>フロントエンド講座</p>
+                                <ul>
+                                    <li>
+                                        <Link href="https://frontend-lecture.vercel.app/" >
+                                            <a target="_blank" rel="noopener noreferrer">
+                                                <p className={style.projects__pjCaption}>作成したテキスト</p>
+                                                <p className={style.projects__pjCaption}>受講登録等にCookieを使用したり、<br />手元の環境にnodeサーバを立ててテキストアプリを起動するなどして、<br />フロントエンドで扱う技術のさわりを体感してもらいながらレクチャーを行いました。</p>
+                                                <Image
+                                                    src='/images/frontend-lec.png'
+                                                    alt='フロントエンド講座で作成したテキストのスクリーンショット'
+                                                    width={1360}
+                                                    height={640}
+                                                    objectFit='contain'
+                                                />
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="https://lecture-cookie-memo.vercel.app/" >
+                                            <a target="_blank" rel="noopener noreferrer">
+                                                <p className={style.projects__pjCaption}>作成したサンプルアプリ（ログイン用パスワードはテキストに記載）</p>
+                                                <Image
+                                                    src='/images/task-app.png'
+                                                    alt='題材に作成したタスク管理アプリ'
+                                                    width={560}
+                                                    height={420}
+                                                    objectFit='contain'
+                                                />
+                                            </a>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <p className={style.projects__ceparate}>*</p>
