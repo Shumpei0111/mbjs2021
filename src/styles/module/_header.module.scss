@@ -140,6 +140,9 @@ $headerMaxWidth: 1216px;
     }
 
     .burgerContainer {
+        right: 0;
+        bottom: 0;
+
         .burger {
             &__bar {
                 width: 68px;
