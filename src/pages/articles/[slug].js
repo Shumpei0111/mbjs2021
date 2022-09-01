@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from "../../components/CodeBlock";
 import Layout from "../../components/Layout";
 import arrangeDate from "../../lib/arrange-date";
+import { getAssociatedPosts } from '../../lib/content-loader';
 
 import gfm from 'remark-gfm';
 import { TwitterShareButton, TwitterIcon } from 'react-share';
@@ -15,10 +16,8 @@ import * as style from '../../styles/module/_page_singleBlog.module.scss';
 
 const SingleBlog = (props) => {
     const pageTitle = props.frontmatter.title;
-    const tags = ( () => {
-        if( Array.isArray(props.frontmatter.tags) ) return props.frontmatter.tags;
-        return [props.frontmatter.tags];
-    } )();
+    const { tags, relatedPosts } = props;
+    // console.log(relatedPosts);
 
     const H1 = ({ node, ...props }) => {
         return (
@@ -147,12 +146,21 @@ export async function getStaticProps(context) {
     const data = await import(`../../content/${slug}.md`);
     const singleDocument = matter(data.default);
 
-    const title = singleDocument.data.title
+    const title = singleDocument.data.title;
+    const frontmatter = JSON.parse(JSON.stringify(singleDocument.data));
+    const tags = ( () => {
+        if( Array.isArray(frontmatter.tags) ) return frontmatter.tags;
+        return [frontmatter.tags];
+    } )();
+
+    const relatedPosts = await getAssociatedPosts(tags);
 
     return {
         props: {
+            relatedPosts: relatedPosts,
             title: title,
-            frontmatter: JSON.parse(JSON.stringify(singleDocument.data)),
+            tags: tags,
+            frontmatter: frontmatter,
             markdownBody: singleDocument.content,
         }
     }

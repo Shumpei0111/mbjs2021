@@ -27,15 +27,34 @@ const readContentFile = async ({ fs, slug, filename }) => {
     const raw = fs.readFileSync( path.join( DIR, `${slug}${EXTENSION}`), 'utf8' );
     const matterResult = matter( raw );
 
-    const { title, date } = matterResult.data;
+    const { title, date, tags } = matterResult.data;
     const { content } = matterResult;
 
     return {
         title,
         date: date,
+        tags: tags,
         slug: slug,
         content: content
     }
 }
 
-export { readContentFiles, listContentFiles, readContentFile }
+// タグの絞りこみ
+const getAssociatedPosts = async ( argTags ) => {
+    const allPosts = await readContentFiles({ fs });
+    const res = allPosts.map(( post ) => {
+        const tags = Array.isArray(post.tags) ? post.tags.slice() : [ post.tags ];
+        const res = [];
+        for (const t of tags) {
+            if( argTags.includes(t) ) {
+                res.push( post );
+            }
+        }
+        return res;
+    });
+    console.log(51, res);
+
+    return res;
+};
+
+export { readContentFiles, listContentFiles, readContentFile, getAssociatedPosts }
