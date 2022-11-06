@@ -17,7 +17,6 @@ import * as style from '../../styles/module/_page_singleBlog.module.scss';
 const SingleBlog = (props) => {
     const pageTitle = props.frontmatter.title;
     const { tags, relatedPosts } = props;
-    // console.log(relatedPosts);
 
     const H1 = ({ node, ...props }) => {
         return (
