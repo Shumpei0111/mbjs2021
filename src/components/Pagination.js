@@ -22,13 +22,13 @@ export const Pagination = (props) => {
                 {arr.map((page) => 
                     <li key={page} className={style.pagenationItem}>
                     { String(page) === currentPage ? 
-                        <Link href={href} as={callBack(page)}><a className={style.currentPage}>{page}</a></Link>
+                        <Link href={href} as={callBack(page)} className={style.currentPage}>{page}</Link>
                         :
-                        <Link href={href} as={callBack(page)}><a>{page}</a></Link>
+                        <Link href={href} as={callBack(page)}>{page}</Link>
                     }
                     </li>
                 )}
             </ul>
         </div>
-    )
+    );
 };

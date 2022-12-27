@@ -19,18 +19,18 @@ const Footer = () => {
             <div className={style.footerTopBorder} />
             <ul className={style.footerLinks}>
                 <li className={`${style.footerLinks__item} ${isBlog ? style.currPage : ''}`}>
-                    <Link href='/archives/1'><a>Blog</a></Link>
+                    <Link href='/archives/1'>Blog</Link>
                 </li>
                 <li className={`${style.footerLinks__item} ${isAbout ? style.currPage : ''}`}>
-                    <Link href='/about'><a>About</a></Link>
+                    <Link href='/about'>About</Link>
                 </li>
                 <li className={`${style.footerLinks__item} ${isContact ? style.currPage : ''}`}>
-                    <Link href='/contact'><a>Contact</a></Link>
+                    <Link href='/contact'>Contact</Link>
                 </li>
             </ul>
             <address translate='no' className={style.footer__address}>{COPY_RIGHT}</address>
         </footer>
-    )
+    );
 };
 
 export default Footer;

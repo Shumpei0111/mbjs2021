@@ -21,11 +21,14 @@ export default function Archive(props) {
                 <p className={style.article__about}>*</p>
                 {posts.map((post) => 
                     <div className={style.articleWrapper} key={post.slug}>
-                        <Link href='/articles/[slug]' as={`/articles/${post.slug}`}>
-                            <a className={style.articleLink}>
-                                <p className={style.articleTitle}>{post.title}</p>
-                                <p className={style.postedDate}>posted at: {arrangeDate(post.date)}</p>
-                            </a>
+                        <Link
+                            href='/articles/[slug]'
+                            as={`/articles/${post.slug}`}
+                            className={style.articleLink}>
+
+                            <p className={style.articleTitle}>{post.title}</p>
+                            <p className={style.postedDate}>posted at: {arrangeDate(post.date)}</p>
+
                         </Link>
                     </div>
                 )}
@@ -36,7 +39,7 @@ export default function Archive(props) {
             </div>
             <TopMarquee />
         </Layout>
-    )
+    );
 }
 
 

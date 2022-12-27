@@ -29,33 +29,36 @@ const Hamburger = (props) => {
                     <ul>
                         <li onClick={handlClick} className={`${style.burgerMenuItem} ${isBlog ? style.currentOpenPage : ''}`
                         }>
-                            <Link href='/archives/1'>
-                                <a 
+                            <Link
+                                href='/archives/1'
                                 onMouseEnter={toggleBlogHover}
-                                onMouseLeave={toggleBlogHover}>Blog</a>
+                                onMouseLeave={toggleBlogHover}>
+                                Blog
                             </Link>
                         </li>
 
                         <li onClick={handlClick} className={`${style.burgerMenuItem} ${isAbout ? style.currentOpenPage : ''}`
                         }>
-                            <Link href='/about'>
-                                <a 
+                            <Link
+                                href='/about'
                                 onMouseEnter={toggleAboutHover}
-                                onMouseLeave={toggleAboutHover}>About</a>
+                                onMouseLeave={toggleAboutHover}>
+                                About
                             </Link>
                         </li>
 
                         <li onClick={handlClick} className={`${style.burgerMenuItem} ${isContact ? style.currentOpenPage : ''}`}>
-                            <Link href='/contact'>
-                                <a
+                            <Link
+                                href='/contact'
                                 onMouseEnter={toggleContactHover}
-                                onMouseLeave={toggleContactHover}>Contact</a>
+                                onMouseLeave={toggleContactHover}>
+                                Contact
                             </Link>
                         </li>
                         <li>
                             <span onClick={handlClick}>
-                                <Link href="/">
-                                    <a className={style.burger__homeLink}><span>HOME</span></a>
+                                <Link href="/" className={style.burger__homeLink}>
+                                    <span>HOME</span>
                                 </Link>
                             </span>
                         </li>
@@ -64,7 +67,7 @@ const Hamburger = (props) => {
                 <p className={style.burgerMenu__siteTitle}>Shumpei portfolio - [MB.js]</p>
             </div>
         </nav>
-    )
+    );
 };
 
 export default Hamburger;

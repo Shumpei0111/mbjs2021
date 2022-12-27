@@ -34,21 +34,21 @@ const About = () => {
                         <p className={style.profile__iam}>同人作家</p>
 
                         <ul className={style.profle__snsList}>
-                            <li><Link href='https://twitter.com/seventhseven'><a target='_blank' rel='noopener'><FontAwesomeIcon icon={faTwitter} /> / @seventhseven</a></Link></li>
-                            <li><Link href='https://github.com/Shumpei0111'><a target='_blank' rel='noopener'><FontAwesomeIcon icon={faGithub} /> / Shumpei0111</a></Link></li>
-                            <li><Link href='https://www.pixiv.net/users/91629'><a target='_blank' rel='noopener'>Pixiv / なな爺</a></Link></li>
+                            <li><Link href='https://twitter.com/seventhseven' target='_blank' rel='noopener'><FontAwesomeIcon icon={faTwitter} />/ @seventhseven</Link></li>
+                            <li><Link href='https://github.com/Shumpei0111' target='_blank' rel='noopener'><FontAwesomeIcon icon={faGithub} />/ Shumpei0111</Link></li>
+                            <li><Link href='https://www.pixiv.net/users/91629' target='_blank' rel='noopener'>Pixiv / なな爺</Link></li>
                         </ul>
                     </div>
                     <div className={`${style.profile__img} ${fadein.animation} ${fadeIn ? fadein.active: ''}`}>
-                        <Link href='https://twitter.com/seventhseven'>
-                            <a target='_blank' rel='noopener'>
-                                <Image
-                                    src='/images/profile.jpg'
-                                    alt='profile photo'
-                                    width={imgWidth}
-                                    height={imgHeight}
-                                />
-                            </a>
+                        <Link href='https://twitter.com/seventhseven' target='_blank' rel='noopener'>
+
+                            <Image
+                                src='/images/profile.jpg'
+                                alt='profile photo'
+                                width={imgWidth}
+                                height={imgHeight}
+                            />
+
                         </Link>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ const About = () => {
             </div>
             <TopMarquee />
         </Layout>
-    )
+    );
 }
 
 export default About;

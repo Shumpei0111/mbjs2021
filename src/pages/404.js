@@ -14,14 +14,14 @@ const NotFoundPage = () => {
                 <div className={style.anotherContents}>
                     <div className={style.anotherContents__item}>
                         <Link href='/archives/1'>
-                            <a>Blog</a>
+                            Blog
                         </Link>
                     </div>
                 </div>
             </div>
             <TopMarquee />
         </Layout>
-    )
+    );
 }
 
 export default NotFoundPage;

@@ -34,13 +34,13 @@ const Header = () => {
     return (
         <div className={style.header}>
             <header className={style.headerContainer}>
-                <Link href='/'>
-                        <a className={style.headerLogo}>      
-                            <p className={style.headerLogo__subtitle}>Shumpei’s portfolio site:</p>
-                            <h1>                        
-                                MB.js
-                            </h1>
-                        </a>
+                <Link href='/' className={style.headerLogo}>
+
+                    <p className={style.headerLogo__subtitle}>Shumpei’s portfolio site:</p>
+                    <h1>                        
+                        MB.js
+                    </h1>
+
                 </Link>
                 <button aria-label='navigation' onClick={toggleModal} className={style.burgerContainer}>
                     <div className={`${style.burger} ${open ? style.burger__open : ""}`}>
@@ -54,20 +54,20 @@ const Header = () => {
             </header>
             <div className={`${style.breadcrumbs} ${isHome ? style.breadcrumbs__notShow : ''}`}>
                 {
-                    !isHome ? <Link href='/'><a>HOME</a></Link> : <></> 
+                    !isHome ? <Link href='/'>HOME</Link> : <></> 
                 }
                 {
-                    isBlog ? <><span className={style.breadcrumbs__slash}>&#047;</span><Link href='/archives/1'><a className={style.breadcrumbs__item}>BLOG</a></Link></> : <></>
+                    isBlog ? <><span className={style.breadcrumbs__slash}>&#047;</span><Link href='/archives/1' className={style.breadcrumbs__item}>BLOG</Link></> : <></>
                 }
                 {
-                    isAbout ? <><span className={style.breadcrumbs__slash}>&#047;</span><Link href='/about'><a className={style.breadcrumbs__item}>ABOUT</a></Link></> : <></>
+                    isAbout ? <><span className={style.breadcrumbs__slash}>&#047;</span><Link href='/about' className={style.breadcrumbs__item}>ABOUT</Link></> : <></>
                 }
                 {
-                    isContact ? <><span className={style.breadcrumbs__slash}>&#047;</span><Link href='/contact'><a className={style.breadcrumbs__item}>CONTACT</a></Link></> : <></>
+                    isContact ? <><span className={style.breadcrumbs__slash}>&#047;</span><Link href='/contact' className={style.breadcrumbs__item}>CONTACT</Link></> : <></>
                 }
             </div>
         </div>
-    )
+    );
 };
 
 export default Header;

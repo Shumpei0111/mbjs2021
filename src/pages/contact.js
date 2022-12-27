@@ -19,20 +19,24 @@ const Contact = () => {
                 <p>For general enquiries.</p>
                 <p>Want to work with me?</p>
                 <p className={style.contact__small}>お問い合わせはこちら</p>
-                <Link href={mailTo}><a className={style.contact__mail} target='_blank' rel='noopener'>shumpei<span className={style.contact__dot}></span>o<span className={style.contact__dot}></span>7g<span className={style.contact__atmark}></span>gmail<span className={style.contact__dot}></span>com</a></Link>
+                <Link
+                    href={mailTo}
+                    className={style.contact__mail}
+                    target='_blank'
+                    rel='noopener'>shumpei<span className={style.contact__dot}></span>o<span className={style.contact__dot}></span>7g<span className={style.contact__atmark}></span>gmail<span className={style.contact__dot}></span>com</Link>
 
                 <div className={style.contact__sns}>
                     <p>You can also follow me.✋</p>
                     <ul>
-                        <li><Link href='https://twitter.com/seventhseven'><a target='_blank' rel='noopener'><FontAwesomeIcon icon={faTwitter} /> / @seventhseven</a></Link></li>
-                        <li><Link href='https://github.com/Shumpei0111'><a target='_blank' rel='noopener'><FontAwesomeIcon icon={faGithub} /> / Shumpei0111</a></Link></li>
-                        <li><Link href='https://www.pixiv.net/users/91629'><a target='_blank' rel='noopener'>Pixiv / なな爺</a></Link></li>
+                        <li><Link href='https://twitter.com/seventhseven' target='_blank' rel='noopener'><FontAwesomeIcon icon={faTwitter} />/ @seventhseven</Link></li>
+                        <li><Link href='https://github.com/Shumpei0111' target='_blank' rel='noopener'><FontAwesomeIcon icon={faGithub} />/ Shumpei0111</Link></li>
+                        <li><Link href='https://www.pixiv.net/users/91629' target='_blank' rel='noopener'>Pixiv / なな爺</Link></li>
                     </ul>
                 </div>
             </div>
             <TopMarquee />
         </Layout>
-    )
+    );
 }
 
 export default Contact;

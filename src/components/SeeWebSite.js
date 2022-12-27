@@ -8,11 +8,11 @@ const SeeWebSite = (props) => {
 
     return (
         <div className={style.seeWebSite__container}>
-            <Link href={url}>
-                <a rel='noopener' target='_blank'>SEE {linkStr}</a>
+            <Link href={url} rel='noopener' target='_blank'>
+                SEE{linkStr}
             </Link>
         </div>
-    )
+    );
 }
 
 export default SeeWebSite;

@@ -64,8 +64,12 @@ const SingleBlog = (props) => {
                         >
                             <TwitterIcon size={20} round={true} />
                         </TwitterShareButton>
-                        <Link href="https://twitter.com/seventhseven">
-                            <a className={style.singleBlog__author}  target="_blank" rel="noopener nofollow noreferrer">@seventhseven</a>
+                        <Link
+                            href="https://twitter.com/seventhseven"
+                            className={style.singleBlog__author}
+                            target="_blank"
+                            rel="noopener nofollow noreferrer">
+                            @seventhseven
                         </Link>
                         <span className={style.singleBlog__date}>posted at: {arrangeDate(props.frontmatter.date)}</span>
                     </div>
@@ -109,13 +113,13 @@ const SingleBlog = (props) => {
                 </div>
 
                 <div className={style.singleBlog__backToList}>
-                    <Link href="/archives/1">
-                        <a className={style.singleBlog__back}>一覧に戻る</a>
+                    <Link href="/archives/1" className={style.singleBlog__back}>
+                        一覧に戻る
                     </Link>
                 </div>
             </div>
         </Layout>
-    )
+    );
 };
 
 export default SingleBlog;
