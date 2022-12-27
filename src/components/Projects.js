@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import GoogleExtension from "./GoogleExtension.js";
 import SeeWebSite from "./SeeWebSite.js";
+import ProjectImage from "./ProjectImage.jsx";
 
 import * as style from "../styles/module/_projects.module.scss";
 
@@ -66,11 +67,9 @@ const Projects = () => {
                   rel="noopener"
                   target="_blank"
                 >
-                  <Image
+                  <ProjectImage
                     src="/images/kamiinabotan-site.png"
                     alt="百合に酔う。「上伊那ぼたん、酔へる姿は百合の花」ファンサイトのスクリーンショット"
-                    width={1200}
-                    height={592}
                   />
                 </Link>
                 <span className={style.projects__date}>2022.04.17</span>
@@ -104,12 +103,7 @@ const Projects = () => {
                   rel="noopener"
                   target="_blank"
                 >
-                  <Image
-                    src="/images/pj_obake-lp.jpg"
-                    alt="廃校探索"
-                    width={1200}
-                    height={592}
-                  />
+                  <ProjectImage src="/images/pj_obake-lp.jpg" alt="廃校探索" />
                 </Link>
                 <span className={style.projects__date}>2021.08.29</span>
               </div>
@@ -152,11 +146,9 @@ const Projects = () => {
                   rel="noopener"
                   target="_blank"
                 >
-                  <Image
+                  <ProjectImage
                     src="/images/pj_present-resort-point.jpg"
                     alt="PRESENT RESORT POINT"
-                    width={1200}
-                    height={587}
                   />
                 </Link>
                 <span className={style.projects__date}>2021.07.25</span>
@@ -200,11 +192,9 @@ const Projects = () => {
                   rel="noopener"
                   target="_blank"
                 >
-                  <Image
+                  <ProjectImage
                     src="/images/pj_villains-homme.jpg"
                     alt="VILLAINS HOMME"
-                    width={748 / 2}
-                    height={940 / 2}
                   />
                 </Link>
                 <span className={style.projects__date}>2021.10.15</span>
@@ -273,23 +263,22 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <p className={style.projects__pjCaption}>
-                        作成したテキスト
-                      </p>
-                      <p className={style.projects__pjCaption}>
-                        受講登録等にCookieを使用したり、
-                        <br />
-                        手元の環境にnodeサーバを立ててテキストアプリを起動するなどして、
-                        <br />
-                        フロントエンドで扱う技術のさわりを体感してもらいながらレクチャーを行いました。
-                      </p>
-                      <Image
+                      <ProjectImage
                         src="/images/frontend-lec.png"
                         alt="フロントエンド講座で作成したテキストのスクリーンショット"
-                        width={1360}
-                        height={640}
-                        objectFit="contain"
                       />
+                      <div>
+                        <p className={style.projects__pjCaption}>
+                          作成したテキスト
+                        </p>
+                        <p className={style.projects__pjCaption}>
+                          受講登録等にCookieを使用したり、
+                          <br />
+                          手元の環境にnodeサーバを立ててテキストアプリを起動するなどして、
+                          <br />
+                          フロントエンドで扱う技術のさわりを体感してもらいながらレクチャーを行いました。
+                        </p>
+                      </div>
                     </Link>
                   </li>
                   <li>
@@ -301,12 +290,9 @@ const Projects = () => {
                       <p className={style.projects__pjCaption}>
                         作成したサンプルアプリ（ログイン用パスワードはテキストに記載）
                       </p>
-                      <Image
+                      <ProjectImage
                         src="/images/task-app.png"
                         alt="題材に作成したタスク管理アプリ"
-                        width={560}
-                        height={420}
-                        objectFit="contain"
                       />
                     </Link>
                   </li>
@@ -358,11 +344,9 @@ const Projects = () => {
                     rel="noopener"
                     target="_blank"
                   >
-                    <Image
+                    <ProjectImage
                       src="/images/wakenai.jpg"
                       alt="パンツァーガールズ8 頒布物"
-                      width={1360}
-                      height={640}
                     />
                   </Link>
                   <span className={style.projects__date}>2016.10.02</span>
@@ -414,11 +398,9 @@ const Projects = () => {
                     rel="noopener"
                     target="_blank"
                   >
-                    <Image
+                    <ProjectImage
                       src="/images/datesuru.jpg"
                       alt="ぱんっあ！ふぉー！7 頒布物"
-                      width={868}
-                      height={640}
                     />
                   </Link>
                   <span className={style.projects__date}>2016.06.12</span>
@@ -461,11 +443,9 @@ const Projects = () => {
                     rel="noopener"
                     target="_blank"
                   >
-                    <Image
+                    <ProjectImage
                       src="/images/umiyukaba.jpg"
                       alt="海ゆかば 頒布物"
-                      width={1140}
-                      height={800}
                     />
                   </Link>
                   <span className={style.projects__date}>2016.02.05</span>

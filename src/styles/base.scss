@@ -1,85 +1,161 @@
-@use './module/variables.module' as v;
+@use "./module/variables.module" as v;
 
 /* A Modern CSS Reset */
 
-*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
-ul {list-style-type: none;}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+ul {
+  list-style-type: none;
+}
 
 /* My Project */
 html {
-    font-size: 62.5%;
-    height: 100%;
-    overflow-x: hidden;
+  font-size: 62.5%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    line-height: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
 }
 
 body {
-    font-size: 1.4rem;
-    position: relative;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: v.$c-black;
-    color: v.$c-primary;
-    font-family: v.$f-family;
-    max-width: v.$max-width;
-    min-width: v.$min-width;
-    margin: 0 auto;
+  font-size: 1.4rem;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: v.$c-black;
+  color: v.$c-primary;
+  font-family: v.$f-family;
+  max-width: v.$max-width;
+  min-width: v.$min-width;
+  margin: 0 auto;
 }
 
 a {
-    text-decoration: none;
-    color: v.$c-primary;
+  text-decoration: none;
+  color: v.$c-primary;
 }
 
-button, input, select, textarea {
-    background: 0 0;
-    border: unset;
-    color: inherit;
-    cursor: pointer;
-    font-size: inherit;
-    letter-spacing: inherit;
-    line-height: inherit;
-    outline: unset;
-    overflow: visible;
-    padding: unset;
-    text-align: inherit;
+button,
+input,
+select,
+textarea {
+  background: 0 0;
+  border: unset;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  outline: unset;
+  overflow: visible;
+  padding: unset;
+  text-align: inherit;
 }
 
-[type=button], [type=reset], [type=submit], button {
-    -webkit-appearance: button;
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
 }
 
 h1 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 h2 {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: v.$c-primary;
-    letter-spacing: 0;
-    transform: rotate(90deg);
-    color: transparent;
-    font-size: 10rem;
-    font-family: 'Hoefler Text', sans-serif;
-    opacity: .2;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: v.$c-primary;
+  letter-spacing: 0;
+  transform: rotate(90deg);
+  color: transparent;
+  font-size: 10rem;
+  font-family: "Hoefler Text", sans-serif;
+  opacity: 0.2;
 }
 
 main {
-    position: relative;
-    width: 100vw;
-    margin: 280px calc(50% - 50vw) auto;
+  position: relative;
+  width: 100vw;
+  margin: 280px calc(50% - 50vw) auto;
 }
 
 // ::-webkit-scrollbar {
 //     display: none;
 //     width: 0;
 // }
+
+.imageContainer {
+  height: 100%;
+}
+
+.imageItem {
+  object-fit: contain;
+  position: relative !important;
+}
+
+.relative {
+  position: relative;
+}
